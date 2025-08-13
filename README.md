@@ -1,5 +1,7 @@
 # LinkedIn Browser Automation - Resume Submission System
 
+> **📍 For complete project documentation and navigation, see [README-index.md](./README-index.md) - the central documentation hub.**
+
 ## Overview
 Automated LinkedIn job search and resume submission workflow using browsermcp server for streamlined job application processes.
 

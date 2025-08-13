@@ -1,0 +1,65 @@
+{
+  "name": "Ivo Dachev",
+  "title": "Full-Stack Web/AI Developer",
+  "experience": "15+ years",
+  "location": "Sacramento, California",
+  "phone": "(650) 222-7923",
+  "email": "dachevivo@gmail.com",
+  "address": "Sacramento, California, United States",
+  "skills": [
+    "Full-Stack Development",
+    "AI/ML Engineering", 
+    "SEO/SEM Optimization",
+    "Web Technologies",
+    "JavaScript/Node.js",
+    "Python",
+    "React/Vue.js",
+    "Database Design",
+    "Cloud Architecture",
+    "Browser Automation",
+    "API Development",
+    "DevOps/CI-CD"
+  ],
+  "preferences": {
+    "remote": true,
+    "hybrid": true,
+    "onsite": false,
+    "salaryMin": 75000,
+    "salaryMax": 150000,
+    "experienceLevel": "Senior",
+    "jobTypes": ["Full-time", "Contract"],
+    "industries": [
+      "Technology",
+      "Software Development", 
+      "AI/Machine Learning",
+      "Digital Marketing",
+      "E-commerce"
+    ],
+    "companySize": ["Startup", "Mid-size", "Enterprise"],
+    "benefits": [
+      "Health Insurance",
+      "401(k)",
+      "Remote Work",
+      "Flexible Hours",
+      "Professional Development"
+    ]
+  },
+  "workAuthorization": {
+    "authorizedToWork": true,
+    "requiresSponsorship": false,
+    "visaStatus": "Authorized to work in US"
+  },
+  "availability": {
+    "startDate": "Immediately",
+    "noticePeriod": "2 weeks",
+    "relocation": false,
+    "travel": "Minimal"
+  },
+  "linkedinProfile": {
+    "url": "https://www.linkedin.com/in/ivo-dachev",
+    "openToWork": true,
+    "profileViewers": 254,
+    "currentCompany": "Incedo Inc.",
+    "headline": "Full-Stack Web/AI Developer #OPEN_TO_WORK"
+  }
+}

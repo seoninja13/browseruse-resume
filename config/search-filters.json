@@ -1,0 +1,162 @@
+{
+  "seo": {
+    "name": "SEO Specialist Positions",
+    "description": "Search Engine Optimization roles combining technical and marketing skills",
+    "keywords": [
+      "SEO",
+      "Search Engine Optimization", 
+      "SEO Specialist",
+      "SEO Manager",
+      "Technical SEO",
+      "SEO Analyst"
+    ],
+    "location": "Sacramento, CA",
+    "remote": true,
+    "experienceLevel": "Senior",
+    "jobType": "Full-time",
+    "salaryMin": 75000,
+    "datePosted": "Past week",
+    "industries": ["Marketing", "Technology", "E-commerce"],
+    "companySize": ["Mid-size", "Enterprise"]
+  },
+  "fullstack": {
+    "name": "Full-Stack Developer Positions", 
+    "description": "Full-stack web development roles with modern technologies",
+    "keywords": [
+      "Full-Stack Developer",
+      "Full Stack Engineer", 
+      "Web Developer",
+      "Frontend Backend Developer",
+      "JavaScript Developer",
+      "React Developer"
+    ],
+    "location": "Sacramento, CA",
+    "remote": true,
+    "experienceLevel": "Senior",
+    "jobType": "Full-time",
+    "salaryMin": 80000,
+    "datePosted": "Past week",
+    "industries": ["Technology", "Software Development", "Fintech"],
+    "companySize": ["Startup", "Mid-size", "Enterprise"]
+  },
+  "ai": {
+    "name": "AI/ML Engineer Positions",
+    "description": "Artificial Intelligence and Machine Learning engineering roles",
+    "keywords": [
+      "AI Engineer",
+      "Machine Learning Engineer",
+      "AI Developer", 
+      "ML Engineer",
+      "Artificial Intelligence",
+      "Data Scientist",
+      "Python Developer"
+    ],
+    "location": "Sacramento, CA", 
+    "remote": true,
+    "experienceLevel": "Senior",
+    "jobType": "Full-time",
+    "salaryMin": 90000,
+    "datePosted": "Past week",
+    "industries": ["Technology", "AI/ML", "Healthcare", "Fintech"],
+    "companySize": ["Startup", "Mid-size", "Enterprise"]
+  },
+  "hybrid": {
+    "name": "Hybrid Tech Roles",
+    "description": "Positions combining multiple technical disciplines",
+    "keywords": [
+      "Full-Stack",
+      "SEO",
+      "AI",
+      "Technical Lead",
+      "Solutions Architect",
+      "Senior Developer"
+    ],
+    "location": "Sacramento, CA",
+    "remote": true,
+    "experienceLevel": "Senior",
+    "jobType": "Full-time", 
+    "salaryMin": 85000,
+    "datePosted": "Past week",
+    "industries": ["Technology", "Software Development", "Digital Marketing"],
+    "companySize": ["Mid-size", "Enterprise"]
+  },
+  "contract": {
+    "name": "Contract/Freelance Positions",
+    "description": "Contract and freelance opportunities for flexible work",
+    "keywords": [
+      "Contract",
+      "Freelance", 
+      "Consultant",
+      "Full-Stack",
+      "SEO",
+      "AI Engineer"
+    ],
+    "location": "Sacramento, CA",
+    "remote": true,
+    "experienceLevel": "Senior",
+    "jobType": "Contract",
+    "salaryMin": 60,
+    "datePosted": "Past month",
+    "industries": ["Technology", "Consulting", "Digital Marketing"],
+    "companySize": ["Startup", "Mid-size", "Enterprise"]
+  },
+  "sacramento_local": {
+    "name": "Sacramento Local Positions",
+    "description": "Local Sacramento area positions with hybrid/onsite options",
+    "keywords": [
+      "Full-Stack Developer",
+      "Web Developer",
+      "SEO",
+      "Software Engineer",
+      "Technical Lead"
+    ],
+    "location": "Sacramento, CA",
+    "remote": false,
+    "experienceLevel": "Senior", 
+    "jobType": "Full-time",
+    "salaryMin": 75000,
+    "datePosted": "Past 2 weeks",
+    "industries": ["Technology", "Government", "Healthcare", "Education"],
+    "companySize": ["Mid-size", "Enterprise"]
+  },
+  "startup": {
+    "name": "Startup Opportunities",
+    "description": "Early-stage startup positions with growth potential",
+    "keywords": [
+      "Full-Stack",
+      "Senior Developer",
+      "Technical Lead",
+      "AI Engineer",
+      "Startup"
+    ],
+    "location": "Sacramento, CA",
+    "remote": true,
+    "experienceLevel": "Senior",
+    "jobType": "Full-time",
+    "salaryMin": 70000,
+    "datePosted": "Past week",
+    "industries": ["Technology", "Startup", "SaaS"],
+    "companySize": ["Startup"],
+    "benefits": ["Equity", "Stock Options", "Flexible Hours"]
+  },
+  "enterprise": {
+    "name": "Enterprise Positions",
+    "description": "Large enterprise company positions with stability",
+    "keywords": [
+      "Senior Developer",
+      "Solutions Architect", 
+      "Technical Lead",
+      "Full-Stack",
+      "Enterprise"
+    ],
+    "location": "Sacramento, CA",
+    "remote": true,
+    "experienceLevel": "Senior",
+    "jobType": "Full-time",
+    "salaryMin": 90000,
+    "datePosted": "Past week", 
+    "industries": ["Technology", "Finance", "Healthcare", "Government"],
+    "companySize": ["Enterprise"],
+    "benefits": ["401k", "Health Insurance", "PTO", "Professional Development"]
+  }
+}
