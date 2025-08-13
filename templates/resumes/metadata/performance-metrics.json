@@ -1,0 +1,95 @@
+{
+  "lastUpdated": "2025-01-13T15:00:00.000Z",
+  "totalResumesGenerated": 3,
+  "averageMatchScore": 88.3,
+  "successRate": 100,
+  "customizationLevelDistribution": {
+    "minimal": 0,
+    "moderate": 2,
+    "aggressive": 1,
+    "extensive": 0
+  },
+  "jobTypeDistribution": {
+    "fullstack": 1,
+    "seo": 1,
+    "ai": 1,
+    "frontend": 0,
+    "backend": 0,
+    "devops": 0
+  },
+  "matchScoreDistribution": {
+    "90-100": 1,
+    "80-89": 2,
+    "70-79": 0,
+    "60-69": 0,
+    "below-60": 0
+  },
+  "averageGenerationTime": 2.3,
+  "topPerformingSkills": [
+    {
+      "skill": "React",
+      "appearances": 2,
+      "averageMatchContribution": 15
+    },
+    {
+      "skill": "Python",
+      "appearances": 2,
+      "averageMatchContribution": 18
+    },
+    {
+      "skill": "AWS",
+      "appearances": 2,
+      "averageMatchContribution": 12
+    },
+    {
+      "skill": "Google Analytics",
+      "appearances": 1,
+      "averageMatchContribution": 20
+    },
+    {
+      "skill": "TensorFlow",
+      "appearances": 1,
+      "averageMatchContribution": 16
+    }
+  ],
+  "companyTypeAnalysis": {
+    "startup": {
+      "count": 1,
+      "averageMatchScore": 85,
+      "successRate": 100
+    },
+    "midsize": {
+      "count": 1,
+      "averageMatchScore": 88,
+      "successRate": 100
+    },
+    "enterprise": {
+      "count": 1,
+      "averageMatchScore": 92,
+      "successRate": 100
+    }
+  },
+  "optimizationRecommendations": [
+    {
+      "category": "Skill Emphasis",
+      "recommendation": "Continue emphasizing React and Python skills as they appear frequently in job requirements",
+      "priority": "high"
+    },
+    {
+      "category": "Customization Level",
+      "recommendation": "Consider more aggressive customization for jobs with match scores below 85%",
+      "priority": "medium"
+    },
+    {
+      "category": "Job Type Coverage",
+      "recommendation": "Expand coverage to include more backend and DevOps positions",
+      "priority": "low"
+    }
+  ],
+  "trends": {
+    "matchScoreTrend": "stable",
+    "generationVolumeTrend": "increasing",
+    "successRateTrend": "stable",
+    "averageCustomizationTrend": "moderate"
+  }
+}

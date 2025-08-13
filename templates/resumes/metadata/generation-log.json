@@ -1,0 +1,38 @@
+[
+  {
+    "timestamp": "2025-01-13T10:30:00.000Z",
+    "jobId": "sample-job-1",
+    "jobTitle": "Senior Full-Stack Developer",
+    "company": "TechCorp Inc.",
+    "matchScore": 92,
+    "customizationLevel": "moderate",
+    "primarySkills": ["React", "Node.js", "PostgreSQL", "AWS", "TypeScript"],
+    "focusAreas": ["Frontend Frameworks", "Backend Technologies", "Cloud Platforms"],
+    "resumePath": "templates/resumes/generated/ivo-dachev-sample-job-1-2025-01-13-103000.pdf",
+    "success": true
+  },
+  {
+    "timestamp": "2025-01-13T11:15:00.000Z",
+    "jobId": "sample-job-2",
+    "jobTitle": "SEO Specialist",
+    "company": "Digital Marketing Solutions",
+    "matchScore": 88,
+    "customizationLevel": "aggressive",
+    "primarySkills": ["Google Analytics", "SEMrush", "JavaScript", "Python", "Google Search Console"],
+    "focusAreas": ["SEO Tools", "Programming Languages", "Web Analytics"],
+    "resumePath": "templates/resumes/generated/ivo-dachev-sample-job-2-2025-01-13-111500.pdf",
+    "success": true
+  },
+  {
+    "timestamp": "2025-01-13T14:45:00.000Z",
+    "jobId": "sample-job-3",
+    "jobTitle": "AI Engineer",
+    "company": "AI Innovations Lab",
+    "matchScore": 85,
+    "customizationLevel": "moderate",
+    "primarySkills": ["Python", "TensorFlow", "scikit-learn", "AWS", "Docker"],
+    "focusAreas": ["AI/ML Technologies", "Programming Languages", "Cloud Platforms"],
+    "resumePath": "templates/resumes/generated/ivo-dachev-sample-job-3-2025-01-13-144500.pdf",
+    "success": true
+  }
+]

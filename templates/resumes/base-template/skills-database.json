@@ -1,0 +1,404 @@
+{
+  "skillCategories": {
+    "programmingLanguages": {
+      "displayName": "Programming Languages",
+      "priority": 1,
+      "skills": {
+        "JavaScript": {
+          "aliases": ["JS", "ECMAScript", "ES6", "ES2020"],
+          "category": "Frontend/Backend",
+          "proficiency": 95,
+          "years": 15,
+          "jobTypes": ["fullstack", "frontend", "backend", "web developer"],
+          "keywords": ["javascript", "js", "ecmascript", "node", "react", "vue"]
+        },
+        "Python": {
+          "aliases": ["Python3", "Py"],
+          "category": "Backend/AI",
+          "proficiency": 90,
+          "years": 8,
+          "jobTypes": ["ai", "ml", "backend", "data science", "automation"],
+          "keywords": ["python", "django", "flask", "tensorflow", "pandas", "numpy"]
+        },
+        "TypeScript": {
+          "aliases": ["TS"],
+          "category": "Frontend/Backend",
+          "proficiency": 85,
+          "years": 5,
+          "jobTypes": ["fullstack", "frontend", "backend"],
+          "keywords": ["typescript", "ts", "type safety", "angular", "react"]
+        },
+        "C#": {
+          "aliases": ["CSharp", "C-Sharp"],
+          "category": "Backend",
+          "proficiency": 80,
+          "years": 6,
+          "jobTypes": ["backend", "enterprise", ".net"],
+          "keywords": ["c#", "csharp", ".net", "asp.net", "mvc"]
+        },
+        "Java": {
+          "aliases": ["JVM"],
+          "category": "Backend/Enterprise",
+          "proficiency": 75,
+          "years": 4,
+          "jobTypes": ["backend", "enterprise", "spring"],
+          "keywords": ["java", "spring", "hibernate", "maven", "gradle"]
+        },
+        "PHP": {
+          "aliases": ["PHP7", "PHP8"],
+          "category": "Backend/Web",
+          "proficiency": 70,
+          "years": 8,
+          "jobTypes": ["backend", "web developer", "cms"],
+          "keywords": ["php", "laravel", "symfony", "wordpress", "mysql"]
+        }
+      }
+    },
+    "frontendFrameworks": {
+      "displayName": "Frontend Frameworks & Libraries",
+      "priority": 2,
+      "skills": {
+        "React": {
+          "aliases": ["ReactJS", "React.js"],
+          "category": "Frontend Framework",
+          "proficiency": 95,
+          "years": 7,
+          "jobTypes": ["frontend", "fullstack", "react developer"],
+          "keywords": ["react", "jsx", "hooks", "redux", "next.js"]
+        },
+        "Vue.js": {
+          "aliases": ["Vue", "VueJS"],
+          "category": "Frontend Framework",
+          "proficiency": 90,
+          "years": 5,
+          "jobTypes": ["frontend", "fullstack", "vue developer"],
+          "keywords": ["vue", "vuex", "nuxt", "composition api", "vue3"]
+        },
+        "Angular": {
+          "aliases": ["AngularJS", "Angular2+"],
+          "category": "Frontend Framework",
+          "proficiency": 80,
+          "years": 3,
+          "jobTypes": ["frontend", "fullstack", "angular developer"],
+          "keywords": ["angular", "typescript", "rxjs", "ngrx", "angular cli"]
+        },
+        "Next.js": {
+          "aliases": ["NextJS"],
+          "category": "React Framework",
+          "proficiency": 85,
+          "years": 3,
+          "jobTypes": ["fullstack", "react developer", "ssr"],
+          "keywords": ["next.js", "ssr", "static generation", "api routes"]
+        },
+        "Nuxt.js": {
+          "aliases": ["NuxtJS"],
+          "category": "Vue Framework",
+          "proficiency": 80,
+          "years": 2,
+          "jobTypes": ["fullstack", "vue developer", "ssr"],
+          "keywords": ["nuxt.js", "ssr", "static generation", "vue"]
+        }
+      }
+    },
+    "backendTechnologies": {
+      "displayName": "Backend Technologies",
+      "priority": 3,
+      "skills": {
+        "Node.js": {
+          "aliases": ["NodeJS", "Node"],
+          "category": "Backend Runtime",
+          "proficiency": 95,
+          "years": 8,
+          "jobTypes": ["backend", "fullstack", "node developer"],
+          "keywords": ["node.js", "express", "npm", "javascript", "api"]
+        },
+        "Express.js": {
+          "aliases": ["Express", "ExpressJS"],
+          "category": "Backend Framework",
+          "proficiency": 90,
+          "years": 8,
+          "jobTypes": ["backend", "fullstack", "api developer"],
+          "keywords": ["express", "middleware", "rest api", "node.js"]
+        },
+        "Django": {
+          "aliases": ["Django Framework"],
+          "category": "Python Framework",
+          "proficiency": 85,
+          "years": 4,
+          "jobTypes": ["backend", "python developer", "web developer"],
+          "keywords": ["django", "python", "orm", "mvc", "rest framework"]
+        },
+        "Flask": {
+          "aliases": ["Flask Framework"],
+          "category": "Python Framework",
+          "proficiency": 80,
+          "years": 3,
+          "jobTypes": ["backend", "python developer", "microservices"],
+          "keywords": ["flask", "python", "microframework", "api", "lightweight"]
+        },
+        "ASP.NET": {
+          "aliases": ["ASP.NET Core", "DotNet"],
+          "category": "Microsoft Framework",
+          "proficiency": 75,
+          "years": 4,
+          "jobTypes": ["backend", ".net developer", "enterprise"],
+          "keywords": ["asp.net", "c#", "mvc", "web api", "entity framework"]
+        }
+      }
+    },
+    "databases": {
+      "displayName": "Databases & Data Storage",
+      "priority": 4,
+      "skills": {
+        "PostgreSQL": {
+          "aliases": ["Postgres", "PSQL"],
+          "category": "Relational Database",
+          "proficiency": 90,
+          "years": 10,
+          "jobTypes": ["backend", "fullstack", "database developer"],
+          "keywords": ["postgresql", "postgres", "sql", "relational", "acid"]
+        },
+        "MongoDB": {
+          "aliases": ["Mongo"],
+          "category": "NoSQL Database",
+          "proficiency": 85,
+          "years": 8,
+          "jobTypes": ["backend", "fullstack", "nosql developer"],
+          "keywords": ["mongodb", "nosql", "document", "aggregation", "atlas"]
+        },
+        "MySQL": {
+          "aliases": ["My SQL"],
+          "category": "Relational Database",
+          "proficiency": 85,
+          "years": 12,
+          "jobTypes": ["backend", "fullstack", "database developer"],
+          "keywords": ["mysql", "sql", "relational", "innodb", "mariadb"]
+        },
+        "Redis": {
+          "aliases": ["Redis Cache"],
+          "category": "In-Memory Database",
+          "proficiency": 80,
+          "years": 5,
+          "jobTypes": ["backend", "caching", "performance"],
+          "keywords": ["redis", "cache", "in-memory", "session", "pub/sub"]
+        },
+        "Elasticsearch": {
+          "aliases": ["Elastic Search", "ES"],
+          "category": "Search Engine",
+          "proficiency": 75,
+          "years": 3,
+          "jobTypes": ["backend", "search", "analytics"],
+          "keywords": ["elasticsearch", "search", "indexing", "kibana", "logstash"]
+        }
+      }
+    },
+    "cloudPlatforms": {
+      "displayName": "Cloud Platforms & Services",
+      "priority": 5,
+      "skills": {
+        "AWS": {
+          "aliases": ["Amazon Web Services"],
+          "category": "Cloud Platform",
+          "proficiency": 90,
+          "years": 6,
+          "jobTypes": ["cloud", "devops", "backend", "fullstack"],
+          "keywords": ["aws", "ec2", "s3", "lambda", "rds", "cloudformation"]
+        },
+        "Azure": {
+          "aliases": ["Microsoft Azure"],
+          "category": "Cloud Platform",
+          "proficiency": 80,
+          "years": 4,
+          "jobTypes": ["cloud", "devops", "enterprise"],
+          "keywords": ["azure", "microsoft", "app service", "sql database", "functions"]
+        },
+        "Google Cloud": {
+          "aliases": ["GCP", "Google Cloud Platform"],
+          "category": "Cloud Platform",
+          "proficiency": 75,
+          "years": 3,
+          "jobTypes": ["cloud", "devops", "ai/ml"],
+          "keywords": ["gcp", "google cloud", "compute engine", "app engine", "bigquery"]
+        },
+        "Heroku": {
+          "aliases": ["Heroku Platform"],
+          "category": "PaaS",
+          "proficiency": 85,
+          "years": 5,
+          "jobTypes": ["deployment", "startup", "rapid development"],
+          "keywords": ["heroku", "paas", "deployment", "buildpacks", "add-ons"]
+        }
+      }
+    },
+    "aiMlTechnologies": {
+      "displayName": "AI/ML Technologies",
+      "priority": 6,
+      "skills": {
+        "TensorFlow": {
+          "aliases": ["TF"],
+          "category": "ML Framework",
+          "proficiency": 85,
+          "years": 4,
+          "jobTypes": ["ai", "ml", "data science"],
+          "keywords": ["tensorflow", "deep learning", "neural networks", "keras"]
+        },
+        "PyTorch": {
+          "aliases": ["Torch"],
+          "category": "ML Framework",
+          "proficiency": 80,
+          "years": 3,
+          "jobTypes": ["ai", "ml", "research"],
+          "keywords": ["pytorch", "deep learning", "neural networks", "research"]
+        },
+        "scikit-learn": {
+          "aliases": ["sklearn", "scikit learn"],
+          "category": "ML Library",
+          "proficiency": 90,
+          "years": 5,
+          "jobTypes": ["ml", "data science", "analytics"],
+          "keywords": ["scikit-learn", "machine learning", "classification", "regression"]
+        },
+        "Pandas": {
+          "aliases": ["Pandas Library"],
+          "category": "Data Analysis",
+          "proficiency": 85,
+          "years": 5,
+          "jobTypes": ["data science", "analytics", "ml"],
+          "keywords": ["pandas", "data analysis", "dataframe", "python"]
+        },
+        "NumPy": {
+          "aliases": ["Numpy"],
+          "category": "Numerical Computing",
+          "proficiency": 85,
+          "years": 5,
+          "jobTypes": ["data science", "ml", "scientific computing"],
+          "keywords": ["numpy", "numerical", "arrays", "scientific computing"]
+        }
+      }
+    },
+    "seoTools": {
+      "displayName": "SEO & Analytics Tools",
+      "priority": 7,
+      "skills": {
+        "Google Analytics": {
+          "aliases": ["GA", "GA4"],
+          "category": "Web Analytics",
+          "proficiency": 95,
+          "years": 10,
+          "jobTypes": ["seo", "marketing", "analytics"],
+          "keywords": ["google analytics", "ga4", "web analytics", "tracking"]
+        },
+        "Google Search Console": {
+          "aliases": ["GSC", "Webmaster Tools"],
+          "category": "SEO Tool",
+          "proficiency": 95,
+          "years": 10,
+          "jobTypes": ["seo", "technical seo", "webmaster"],
+          "keywords": ["search console", "gsc", "indexing", "search performance"]
+        },
+        "SEMrush": {
+          "aliases": ["SEM Rush"],
+          "category": "SEO Platform",
+          "proficiency": 90,
+          "years": 6,
+          "jobTypes": ["seo", "sem", "digital marketing"],
+          "keywords": ["semrush", "keyword research", "competitor analysis", "backlinks"]
+        },
+        "Ahrefs": {
+          "aliases": ["A Hrefs"],
+          "category": "SEO Platform",
+          "proficiency": 85,
+          "years": 5,
+          "jobTypes": ["seo", "link building", "content marketing"],
+          "keywords": ["ahrefs", "backlinks", "keyword research", "site audit"]
+        },
+        "Screaming Frog": {
+          "aliases": ["Screaming Frog SEO Spider"],
+          "category": "SEO Crawler",
+          "proficiency": 80,
+          "years": 4,
+          "jobTypes": ["technical seo", "site audit"],
+          "keywords": ["screaming frog", "crawler", "technical seo", "site audit"]
+        }
+      }
+    },
+    "devOpsTools": {
+      "displayName": "DevOps & Deployment Tools",
+      "priority": 8,
+      "skills": {
+        "Docker": {
+          "aliases": ["Docker Container"],
+          "category": "Containerization",
+          "proficiency": 85,
+          "years": 5,
+          "jobTypes": ["devops", "backend", "deployment"],
+          "keywords": ["docker", "containers", "dockerfile", "compose"]
+        },
+        "Kubernetes": {
+          "aliases": ["K8s"],
+          "category": "Container Orchestration",
+          "proficiency": 80,
+          "years": 3,
+          "jobTypes": ["devops", "cloud", "scalability"],
+          "keywords": ["kubernetes", "k8s", "orchestration", "pods", "services"]
+        },
+        "Jenkins": {
+          "aliases": ["Jenkins CI"],
+          "category": "CI/CD",
+          "proficiency": 80,
+          "years": 4,
+          "jobTypes": ["devops", "automation", "ci/cd"],
+          "keywords": ["jenkins", "ci/cd", "automation", "pipeline", "build"]
+        },
+        "GitLab CI": {
+          "aliases": ["GitLab CI/CD"],
+          "category": "CI/CD",
+          "proficiency": 85,
+          "years": 4,
+          "jobTypes": ["devops", "git", "ci/cd"],
+          "keywords": ["gitlab", "ci/cd", "pipeline", "automation", "git"]
+        },
+        "GitHub Actions": {
+          "aliases": ["GH Actions"],
+          "category": "CI/CD",
+          "proficiency": 90,
+          "years": 3,
+          "jobTypes": ["devops", "automation", "github"],
+          "keywords": ["github actions", "workflow", "automation", "ci/cd"]
+        }
+      }
+    }
+  },
+  "jobTypeMapping": {
+    "fullstack": {
+      "primarySkills": ["JavaScript", "React", "Node.js", "PostgreSQL", "AWS"],
+      "secondarySkills": ["TypeScript", "Vue.js", "MongoDB", "Docker", "Express.js"],
+      "keywords": ["full-stack", "fullstack", "web developer", "javascript", "react", "node"]
+    },
+    "frontend": {
+      "primarySkills": ["JavaScript", "React", "Vue.js", "TypeScript", "CSS"],
+      "secondarySkills": ["Angular", "Next.js", "Webpack", "SASS", "HTML5"],
+      "keywords": ["frontend", "front-end", "ui", "react", "vue", "javascript"]
+    },
+    "backend": {
+      "primarySkills": ["Node.js", "Python", "PostgreSQL", "Express.js", "AWS"],
+      "secondarySkills": ["Django", "MongoDB", "Redis", "Docker", "API"],
+      "keywords": ["backend", "back-end", "api", "server", "database", "node"]
+    },
+    "ai": {
+      "primarySkills": ["Python", "TensorFlow", "scikit-learn", "Pandas", "NumPy"],
+      "secondarySkills": ["PyTorch", "AWS", "Docker", "Jupyter", "SQL"],
+      "keywords": ["ai", "artificial intelligence", "machine learning", "ml", "tensorflow", "python"]
+    },
+    "seo": {
+      "primarySkills": ["Google Analytics", "Google Search Console", "SEMrush", "JavaScript", "HTML"],
+      "secondarySkills": ["Ahrefs", "Screaming Frog", "Python", "SQL", "Excel"],
+      "keywords": ["seo", "search engine optimization", "analytics", "sem", "digital marketing"]
+    },
+    "devops": {
+      "primarySkills": ["Docker", "AWS", "Kubernetes", "Jenkins", "GitHub Actions"],
+      "secondarySkills": ["Terraform", "Ansible", "Monitoring", "Linux", "Bash"],
+      "keywords": ["devops", "deployment", "ci/cd", "docker", "kubernetes", "aws"]
+    }
+  }
+}

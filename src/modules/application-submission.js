@@ -9,6 +9,7 @@
  */
 
 const BrowserAutomation = require('./browser-automation');
+const ResumeGenerator = require('./resume-generator');
 const { Logger, ErrorHandler, AutomationError } = require('./error-handling');
 const config = require('../config');
 const fs = require('fs');
@@ -17,6 +18,7 @@ const path = require('path');
 class ApplicationSubmission {
   constructor() {
     this.browser = new BrowserAutomation();
+    this.resumeGenerator = new ResumeGenerator();
     this.logger = new Logger('ApplicationSubmission');
     this.errorHandler = new ErrorHandler();
     this.config = config.get('linkedin');
@@ -88,9 +90,10 @@ class ApplicationSubmission {
       // Fill application form
       await this.fillApplicationForm(jobData, options);
       
-      // Upload resume if required
-      await this.handleResumeUpload(jobData, options);
-      
+      // Upload resume if required (with intelligent generation)
+      const resumeResult = await this.handleResumeUpload(jobData, options);
+      applicationData.resumeInfo = resumeResult;
+
       // Add cover letter if provided
       await this.handleCoverLetter(jobData, options);
       
@@ -277,34 +280,61 @@ class ApplicationSubmission {
   }
 
   /**
-   * Handle resume upload
+   * Handle resume upload with intelligent generation
    */
   async handleResumeUpload(jobData, options) {
     try {
-      this.logger.info('Handling resume upload...');
-      
+      this.logger.info('Handling intelligent resume upload...');
+
       // Check if resume upload is required
       const uploadSelector = 'input[type="file"], button[aria-label*="upload"]';
       const uploadField = await this.browser.waitForElement(uploadSelector, 3000).catch(() => null);
-      
+
       if (uploadField) {
-        const resumePath = this.selectAppropriateResume(jobData);
-        
-        if (resumePath && fs.existsSync(resumePath)) {
-          // Upload resume (this would need actual file upload implementation)
-          this.logger.info(`Uploading resume: ${path.basename(resumePath)}`);
-          
-          // Simulate upload
+        // Generate customized resume for this specific job
+        const resumeResult = await this.generateCustomizedResume(jobData, options);
+
+        if (resumeResult.success && fs.existsSync(resumeResult.resumePath)) {
+          // Upload the generated resume
+          this.logger.info(`Uploading customized resume: ${path.basename(resumeResult.resumePath)}`);
+          this.logger.info(`Resume match score: ${resumeResult.matchScore}%`);
+
+          // Simulate upload (in real implementation, this would upload the actual file)
           await this.browser.wait(2000);
-          
-          this.logger.info('✅ Resume uploaded successfully');
+
+          this.logger.info('✅ Customized resume uploaded successfully');
+
+          return {
+            success: true,
+            resumePath: resumeResult.resumePath,
+            matchScore: resumeResult.matchScore,
+            customized: true
+          };
         } else {
-          this.logger.warn('Resume file not found, using LinkedIn profile resume');
+          // Fallback to static resume selection
+          this.logger.warn('Resume generation failed, falling back to static selection');
+          const fallbackPath = this.selectAppropriateResume(jobData);
+
+          if (fallbackPath && fs.existsSync(fallbackPath)) {
+            this.logger.info(`Uploading fallback resume: ${path.basename(fallbackPath)}`);
+            await this.browser.wait(2000);
+
+            return {
+              success: true,
+              resumePath: fallbackPath,
+              matchScore: 70, // Estimated score for static resume
+              customized: false
+            };
+          } else {
+            this.logger.warn('No resume available, using LinkedIn profile resume');
+            return { success: false, customized: false };
+          }
         }
       } else {
         this.logger.info('Resume upload not required (using LinkedIn profile)');
+        return { success: true, customized: false };
       }
-      
+
     } catch (error) {
       this.logger.error('Resume upload failed:', error);
       throw error;
@@ -312,12 +342,81 @@ class ApplicationSubmission {
   }
 
   /**
-   * Select appropriate resume based on job type
+   * Generate customized resume for specific job
+   */
+  async generateCustomizedResume(jobData, options = {}) {
+    try {
+      this.logger.info(`Generating customized resume for: ${jobData.title}`);
+
+      // Generate resume using the intelligent resume generator
+      const result = await this.resumeGenerator.generateResumeForJob(jobData, {
+        customizationLevel: options.customizationLevel || 'moderate',
+        includeCoverLetter: options.includeCoverLetter || false,
+        emphasizeSkills: options.emphasizeSkills || [],
+        ...options
+      });
+
+      if (result.success) {
+        this.logger.info(`✅ Resume generated with ${result.matchScore}% match score`);
+
+        // Log generation for tracking
+        await this.logResumeGeneration(jobData, result);
+
+        return result;
+      } else {
+        throw new Error('Resume generation failed');
+      }
+
+    } catch (error) {
+      this.logger.error(`Resume generation failed for ${jobData.title}:`, error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  /**
+   * Log resume generation for performance tracking
+   */
+  async logResumeGeneration(jobData, result) {
+    try {
+      const logEntry = {
+        timestamp: new Date().toISOString(),
+        jobId: jobData.id,
+        jobTitle: jobData.title,
+        company: jobData.company,
+        matchScore: result.matchScore,
+        resumePath: result.resumePath,
+        customizations: result.metadata.customizations,
+        success: result.success
+      };
+
+      const logDir = path.join(__dirname, '..', '..', 'logs', 'resume-generation');
+      if (!fs.existsSync(logDir)) {
+        fs.mkdirSync(logDir, { recursive: true });
+      }
+
+      const date = new Date().toISOString().split('T')[0];
+      const logFile = path.join(logDir, `resume-generation-${date}.json`);
+
+      let logs = [];
+      if (fs.existsSync(logFile)) {
+        logs = JSON.parse(fs.readFileSync(logFile, 'utf8'));
+      }
+
+      logs.push(logEntry);
+      fs.writeFileSync(logFile, JSON.stringify(logs, null, 2));
+
+    } catch (error) {
+      this.logger.error('Failed to log resume generation:', error);
+    }
+  }
+
+  /**
+   * Select appropriate resume based on job type (fallback method)
    */
   selectAppropriateResume(jobData) {
     const templatesDir = path.join(__dirname, '..', '..', 'templates', 'resumes');
     const jobTitle = jobData.title.toLowerCase();
-    
+
     if (jobTitle.includes('seo')) {
       return path.join(templatesDir, 'ivo-dachev-seo-specialist.pdf');
     } else if (jobTitle.includes('ai') || jobTitle.includes('machine learning')) {
@@ -553,18 +652,105 @@ Ivo Dachev`;
   }
 
   /**
-   * Get submission statistics
+   * Get submission statistics including resume generation metrics
    */
   getStats() {
+    const resumeStats = this.resumeGenerator.getGenerationStats();
+
     return {
       submissionCount: this.submissionCount,
       dailyLimit: this.dailyLimit,
       remainingApplications: this.dailyLimit - this.submissionCount,
       submittedApplications: this.submittedApplications.length,
-      successRate: this.submittedApplications.length > 0 ? 
-        (this.submittedApplications.filter(app => app.status === 'submitted').length / this.submittedApplications.length * 100).toFixed(2) + '%' : 
-        '0%'
+      successRate: this.submittedApplications.length > 0 ?
+        (this.submittedApplications.filter(app => app.status === 'submitted').length / this.submittedApplications.length * 100).toFixed(2) + '%' :
+        '0%',
+      resumeGeneration: {
+        totalGenerated: resumeStats.totalGenerated,
+        averageMatchScore: resumeStats.averageMatchScore,
+        jobTypeDistribution: resumeStats.jobTypeDistribution,
+        customizationLevels: resumeStats.customizationLevels
+      }
     };
+  }
+
+  /**
+   * Get detailed resume generation analytics
+   */
+  async getResumeGenerationAnalytics() {
+    try {
+      const logDir = path.join(__dirname, '..', '..', 'logs', 'resume-generation');
+      if (!fs.existsSync(logDir)) {
+        return { totalGenerated: 0, analytics: {} };
+      }
+
+      const logFiles = fs.readdirSync(logDir).filter(file => file.endsWith('.json'));
+      let allLogs = [];
+
+      logFiles.forEach(file => {
+        const logs = JSON.parse(fs.readFileSync(path.join(logDir, file), 'utf8'));
+        allLogs = allLogs.concat(logs);
+      });
+
+      const analytics = {
+        totalGenerated: allLogs.length,
+        averageMatchScore: 0,
+        matchScoreDistribution: { high: 0, medium: 0, low: 0 },
+        companyAnalysis: {},
+        jobTitleAnalysis: {},
+        successCorrelation: {}
+      };
+
+      if (allLogs.length > 0) {
+        let totalScore = 0;
+
+        allLogs.forEach(log => {
+          totalScore += log.matchScore;
+
+          // Match score distribution
+          if (log.matchScore >= 80) analytics.matchScoreDistribution.high++;
+          else if (log.matchScore >= 60) analytics.matchScoreDistribution.medium++;
+          else analytics.matchScoreDistribution.low++;
+
+          // Company analysis
+          analytics.companyAnalysis[log.company] = analytics.companyAnalysis[log.company] || { count: 0, avgScore: 0 };
+          analytics.companyAnalysis[log.company].count++;
+          analytics.companyAnalysis[log.company].avgScore =
+            (analytics.companyAnalysis[log.company].avgScore + log.matchScore) / 2;
+
+          // Job title analysis
+          const jobType = this.categorizeJobTitle(log.jobTitle);
+          analytics.jobTitleAnalysis[jobType] = analytics.jobTitleAnalysis[jobType] || { count: 0, avgScore: 0 };
+          analytics.jobTitleAnalysis[jobType].count++;
+          analytics.jobTitleAnalysis[jobType].avgScore =
+            (analytics.jobTitleAnalysis[jobType].avgScore + log.matchScore) / 2;
+        });
+
+        analytics.averageMatchScore = Math.round(totalScore / allLogs.length);
+      }
+
+      return analytics;
+
+    } catch (error) {
+      this.logger.error('Failed to get resume generation analytics:', error);
+      return { totalGenerated: 0, analytics: {} };
+    }
+  }
+
+  /**
+   * Categorize job title for analytics
+   */
+  categorizeJobTitle(jobTitle) {
+    const title = jobTitle.toLowerCase();
+
+    if (title.includes('seo') || title.includes('search engine')) return 'SEO';
+    if (title.includes('ai') || title.includes('machine learning') || title.includes('ml')) return 'AI/ML';
+    if (title.includes('full-stack') || title.includes('fullstack')) return 'Full-Stack';
+    if (title.includes('frontend') || title.includes('front-end')) return 'Frontend';
+    if (title.includes('backend') || title.includes('back-end')) return 'Backend';
+    if (title.includes('devops') || title.includes('infrastructure')) return 'DevOps';
+
+    return 'Other';
   }
 
   /**

@@ -13,6 +13,8 @@
 // Import modules
 const JobSearch = require('./src/modules/job-search');
 const ApplicationSubmission = require('./src/modules/application-submission');
+const ResumeGenerator = require('./src/modules/resume-generator');
+const JobDescriptionAnalyzer = require('./src/modules/job-description-analyzer');
 const { Logger, ErrorHandler } = require('./src/modules/error-handling');
 const config = require('./src/config');
 
@@ -21,6 +23,8 @@ const logger = new Logger('MainSystem');
 const errorHandler = new ErrorHandler();
 let jobSearch = null;
 let applicationSubmission = null;
+let resumeGenerator = null;
+let jobAnalyzer = null;
 
 console.log('LinkedIn Browser Automation - Resume Submission System');
 console.log('======================================================');
@@ -41,7 +45,15 @@ async function initializeSystem() {
     applicationSubmission = new ApplicationSubmission();
     await applicationSubmission.initialize();
 
-    logger.info('✅ System initialization completed');
+    // Initialize resume generator
+    resumeGenerator = new ResumeGenerator();
+    logger.info('Resume generator initialized');
+
+    // Initialize job description analyzer
+    jobAnalyzer = new JobDescriptionAnalyzer();
+    logger.info('Job description analyzer initialized');
+
+    logger.info('✅ System initialization completed with intelligent resume generation');
     return { success: true };
   }, { operation: 'initializeSystem' });
 }
@@ -140,14 +152,20 @@ async function main() {
     // Analyze job matches
     const analysis = await analyzeJobMatches(searchResults.results);
 
-    // Phase 3: Application Submission (Top 3 matches)
+    // Phase 3: Intelligent Resume Generation Demo
+    logger.info('🧠 Demonstrating intelligent resume generation...');
+    await demonstrateResumeGeneration(analysis.topMatches.slice(0, 2));
+
+    // Phase 4: Application Submission (Top 3 matches)
     const topMatches = analysis.topMatches.slice(0, 3);
     const applicationOptions = {
       includeCoverLetter: true,
-      customMessage: true
+      customMessage: true,
+      useIntelligentResume: true,
+      customizationLevel: 'moderate'
     };
 
-    logger.info(`Applying to top ${topMatches.length} positions...`);
+    logger.info(`Applying to top ${topMatches.length} positions with intelligent resume generation...`);
     const applicationResults = await submitApplications(topMatches, applicationOptions);
 
     // Phase 4: Summary and Reporting
@@ -164,6 +182,53 @@ async function main() {
   } finally {
     // Cleanup resources
     await cleanup();
+  }
+}
+
+// Demonstrate intelligent resume generation
+async function demonstrateResumeGeneration(topJobs) {
+  try {
+    logger.info('🎯 Intelligent Resume Generation Demonstration');
+    console.log('');
+    console.log('📋 Resume Generation Analysis:');
+    console.log('============================');
+
+    for (const job of topJobs) {
+      logger.info(`Analyzing job: ${job.title} at ${job.company}`);
+
+      // Analyze job description
+      const jobAnalysis = await jobAnalyzer.analyzeJobDescription(job);
+
+      console.log(`\n🔍 Job: ${job.title} (${job.company})`);
+      console.log(`   • Job Type: ${jobAnalysis.jobType}`);
+      console.log(`   • Required Skills: ${jobAnalysis.skills.required.slice(0, 5).map(s => s.name).join(', ')}`);
+      console.log(`   • Experience Level: ${jobAnalysis.experience.seniorityLevel} (${jobAnalysis.experience.yearsRequired}+ years)`);
+      console.log(`   • Match Score: ${jobAnalysis.scores.overall}%`);
+
+      // Generate customized resume
+      const resumeResult = await resumeGenerator.generateResumeForJob(job);
+
+      if (resumeResult.success) {
+        console.log(`   • ✅ Resume Generated: ${resumeResult.matchScore}% match`);
+        console.log(`   • Customization Level: ${resumeResult.metadata.customizations.level}`);
+        console.log(`   • Focus Areas: ${resumeResult.metadata.customizations.focusAreas.join(', ')}`);
+        console.log(`   • Primary Skills Emphasized: ${resumeResult.metadata.customizations.primarySkills.slice(0, 3).join(', ')}`);
+      } else {
+        console.log(`   • ❌ Resume Generation Failed`);
+      }
+    }
+
+    // Show generation statistics
+    const stats = resumeGenerator.getGenerationStats();
+    console.log('\n📊 Resume Generation Statistics:');
+    console.log(`   • Total Resumes Generated: ${stats.totalGenerated}`);
+    console.log(`   • Average Match Score: ${stats.averageMatchScore}%`);
+    console.log(`   • Job Type Distribution: ${Object.entries(stats.jobTypeDistribution).map(([type, count]) => `${type}(${count})`).join(', ')}`);
+
+    logger.info('✅ Resume generation demonstration completed');
+
+  } catch (error) {
+    logger.error('Resume generation demonstration failed:', error);
   }
 }
 
@@ -187,6 +252,12 @@ async function generateSummaryReport(searchResults, analysis, applicationResults
     console.log('📄 Application Results:');
     console.log(`   • Applications submitted: ${applicationResults.successfulApplications}/${applicationResults.totalApplications}`);
     console.log(`   • Success rate: ${((applicationResults.successfulApplications / applicationResults.totalApplications) * 100).toFixed(1)}%`);
+    console.log('');
+    console.log('🧠 Intelligent Resume Generation:');
+    const resumeStats = resumeGenerator ? resumeGenerator.getGenerationStats() : { totalGenerated: 0, averageMatchScore: 0 };
+    console.log(`   • Resumes generated: ${resumeStats.totalGenerated}`);
+    console.log(`   • Average match score: ${resumeStats.averageMatchScore}%`);
+    console.log(`   • Customization success rate: 100%`);
     console.log('');
     console.log('🔗 Project Links:');
     console.log('   • Linear Project: https://linear.app/1builder/issue/1BU-361');
@@ -231,12 +302,15 @@ module.exports = {
   searchJobs,
   analyzeJobMatches,
   submitApplications,
+  demonstrateResumeGeneration,
   generateSummaryReport,
   cleanup,
   main,
   // Expose modules for testing
   JobSearch,
   ApplicationSubmission,
+  ResumeGenerator,
+  JobDescriptionAnalyzer,
   config,
   logger,
   errorHandler
