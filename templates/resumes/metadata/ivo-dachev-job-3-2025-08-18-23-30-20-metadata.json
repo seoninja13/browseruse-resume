@@ -1,0 +1,34 @@
+{
+  "jobId": "job-3",
+  "jobTitle": "Full Stack Engineer",
+  "company": "Salt AI",
+  "generatedAt": "2025-08-18T23:30:22.276Z",
+  "jobAnalysis": {
+    "jobType": "fullstack",
+    "requiredSkills": [],
+    "experienceRequirements": {
+      "yearsRequired": 0,
+      "seniorityLevel": "mid",
+      "specificExperience": []
+    },
+    "skillMatchScores": {},
+    "overallMatchScore": 30,
+    "primaryFocus": {
+      "jobType": "fullstack",
+      "primarySkills": [],
+      "focusAreas": []
+    },
+    "customizationLevel": "extensive"
+  },
+  "customizations": {
+    "level": "extensive",
+    "focusAreas": [],
+    "primarySkills": [],
+    "matchScore": 30,
+    "customizedAt": "2025-08-18T23:30:20.256Z"
+  },
+  "filePaths": {
+    "json": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-3-2025-08-18-23-30-20.json",
+    "pdf": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-3-2025-08-18-23-30-20.pdf"
+  }
+}

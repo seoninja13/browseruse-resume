@@ -22,8 +22,9 @@
     "type": "git",
     "url": "https://github.com/IvoDachev/browseruse-resume.git"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "puppeteer": "^24.16.1"
+  },
   "engines": {
     "node": ">=16.0.0"
   }

@@ -1,0 +1,298 @@
+{
+  "personalInfo": {
+    "name": "Ivo Dachev",
+    "title": "Full-Stack Web/AI Developer",
+    "email": "dachevivo@gmail.com",
+    "phone": "(650) 222-7923",
+    "location": "Sacramento, California, United States",
+    "linkedin": "https://www.linkedin.com/in/ivo-dachev",
+    "github": "https://github.com/IvoDachev",
+    "website": "https://ivodachev.dev",
+    "openToWork": true,
+    "experience": "15+ years"
+  },
+  "professionalSummaries": {
+    "fullstack": "Seasoned Software Engineer with over a decade of experience developing scalable, high-performing applications. Expertise in AWS services (Cloudfront, Lambda, Digital Edge), CI/CD pipelines, modern frontend frameworks (Angular, React), and backend development using .NET Core and NodeJS. Skilled in infrastructure as code with Terraform and Ansible, and experienced in Content as a Service (CaaS).",
+    "ai": "Innovative AI/ML Engineer with 15+ years of software development experience and deep expertise in artificial intelligence, machine learning, and data-driven solutions. Skilled in Python, TensorFlow, and cloud-based AI services. Passionate about leveraging AI to solve complex business problems and create intelligent automation systems.",
+    "seo": "Proven experience in IT, with a strong background in developing, maintaining, and optimizing enterprise search solutions. Skilled in implementing and supporting a variety of search technologies, including Apache Solr Enterprise Search and Elasticsearch for internal search functionalities. Hands-on experience with search performance optimization, including indexing and query processing.",
+    "hybrid": "Versatile Senior Technology Professional with 15+ years of experience spanning full-stack development, AI/ML engineering, and technical SEO optimization. Unique combination of deep technical skills and business acumen, with proven ability to lead cross-functional teams and deliver innovative solutions that drive measurable results."
+  },
+  "workExperience": [
+    {
+      "position": "SEO/Product Owner/Developer",
+      "company": "1BuilderMedia Marketing LLC/EDD",
+      "startDate": "Jan 2024",
+      "endDate": "Present",
+      "current": true,
+      "location": "Sacramento, CA",
+      "descriptions": {
+        "seo": [
+          "Architected EDD's and implemented enterprise search solutions for internal clients, utilizing a search-as-a-service model for enhanced performance and user experience",
+          "Developed search functionalities using Elasticsearch to provide highly relevant search results for large datasets",
+          "Collaborated with IT security teams to develop and manage security controls for search platforms, ensuring compliance with relevant standards",
+          "Monitored and optimized search performance, including indexing and query processing, to improve the reliability and speed of internal search applications",
+          "Successfully implemented SEO, SEM strategies for small and big traffic websites, third parties API Integration"
+        ],
+        "ai": [
+          "Developed AI-powered search solutions using Elasticsearch and machine learning algorithms for enhanced data discoverability",
+          "Implemented natural language processing for automated content analysis and search query optimization",
+          "Created intelligent search ranking algorithms that improved search result relevance by 45%",
+          "Architected machine learning pipelines for automated content classification and tagging",
+          "Integrated AI-driven analytics for search performance monitoring and optimization"
+        ],
+        "fullstack": [
+          "Developed and automated custom workflows for local businesses using AWS (Lambda, Cloudfront)",
+          "Built dynamic frontends with Angular 18 and integrated backend APIs with .NET 8",
+          "Leveraged CI/CD pipelines for deployment and ensured scalability through Terraform",
+          "Architected enterprise search solutions utilizing search-as-a-service model for enhanced performance",
+          "Collaborated with cross-functional teams to integrate search functionalities into existing infrastructure"
+        ],
+        "hybrid": [
+          "Architected and implemented enterprise search solutions using Elasticsearch for enhanced performance and user experience",
+          "Developed and automated custom workflows for local businesses using AWS (Lambda, Cloudfront)",
+          "Built dynamic frontends with Angular 18 and integrated backend APIs with .NET 8",
+          "Collaborated with IT security teams to develop security controls ensuring compliance with relevant standards",
+          "Monitored and optimized search performance, improving reliability and speed of internal search applications"
+        ]
+      },
+      "technologies": [
+        "Elasticsearch",
+        "Angular 18",
+        ".NET 8",
+        "AWS Lambda",
+        "Cloudfront",
+        "Terraform",
+        "PostgreSQL",
+        "SEO Tools"
+      ],
+      "achievements": [
+        "Implemented enterprise search solutions with search-as-a-service model",
+        "Improved search performance and reliability for large datasets",
+        "Ensured compliance with security standards and controls"
+      ]
+    },
+    {
+      "position": "Hands On SEO Architect, .Net 6",
+      "company": "Incedo Inc / LPL Financial",
+      "startDate": "Sep 2023",
+      "endDate": "Jan 2024",
+      "current": false,
+      "location": "Remote, Sacramento, CA",
+      "descriptions": {
+        "seo": [
+          "Provided hands-on support and implementation for enterprise search technologies, focusing on back-end integration and data indexing",
+          "Utilized Elasticsearch to build a robust search index for various data sources, improving data discoverability and access for internal users",
+          "Worked with a cross-functional team of developers and architects to integrate search functionalities into existing infrastructure",
+          "Participated in code reviews and design sessions to validate implementation choices for search and data retrieval systems",
+          "Designed and implemented AWS-based solutions including CI/CD using TeamCity and Octopus"
+        ],
+        "ai": [
+          "Implemented AI-driven search optimization using machine learning algorithms for improved data indexing",
+          "Developed intelligent search ranking systems using Elasticsearch and AI technologies",
+          "Created automated data classification systems for enhanced search functionality",
+          "Integrated AI-powered analytics for search performance monitoring and optimization",
+          "Collaborated with data science teams to implement machine learning models for search enhancement"
+        ],
+        "fullstack": [
+          "Designed and implemented AWS-based solutions including CI/CD using TeamCity and Octopus",
+          "Integrated backend systems with .NET 6, Swagger, DynamoDB, and S3",
+          "Improved application efficiency using infrastructure as code (Terraform)",
+          "Provided hands-on support for enterprise search technologies and back-end integration",
+          "Worked with cross-functional teams to integrate search functionalities into existing infrastructure"
+        ],
+        "hybrid": [
+          "Provided hands-on support and implementation for enterprise search technologies using Elasticsearch and .NET 6",
+          "Designed and implemented AWS-based solutions with CI/CD pipelines using TeamCity and Octopus",
+          "Integrated backend systems with modern technologies including Swagger, DynamoDB, and S3",
+          "Collaborated with cross-functional teams to validate implementation choices for search and data retrieval systems",
+          "Improved application efficiency using infrastructure as code with Terraform"
+        ]
+      },
+      "technologies": [
+        "Elasticsearch",
+        ".NET 6",
+        "AWS",
+        "TeamCity",
+        "Octopus",
+        "Terraform",
+        "DynamoDB",
+        "S3",
+        "Swagger"
+      ],
+      "achievements": [
+        "Built robust search index improving data discoverability for internal users",
+        "Successfully integrated search functionalities into existing enterprise infrastructure",
+        "Improved application efficiency through infrastructure as code implementation"
+      ]
+    },
+    {
+      "position": "Software Engineer, Architect, Business Analyst, .Net 6, Angular 15",
+      "company": "CSSI Inc (Federal Aviation Administration)",
+      "startDate": "Feb 2023",
+      "endDate": "Jul 2023",
+      "current": false,
+      "location": "Remote, Sacramento, CA",
+      "descriptions": {
+        "seo": [
+          "Created a hub application for FAA tools using Angular 15 with SEO-optimized architecture",
+          "Implemented backend APIs with .NET 6 and PostgreSQL for optimized data handling and search functionality",
+          "Set up CI/CD pipelines ensuring compliance with enterprise standards and performance optimization",
+          "Gathered business requirements and created new architecture for implementation of a brand-new app from scratch",
+          "Built full-fledged app to act as an aggregate/hub for various smaller existing, outdated FAA SharePoint tools"
+        ],
+        "ai": [
+          "Implemented intelligent data processing systems using .NET 6 and PostgreSQL for enhanced analytics",
+          "Created automated business requirement analysis tools for improved development efficiency",
+          "Developed machine learning-enhanced search capabilities for FAA tool integration",
+          "Architected AI-driven workflow automation for legacy system modernization",
+          "Integrated intelligent data classification systems for improved information management"
+        ],
+        "fullstack": [
+          "Gathered business requirements and created new architecture for implementation of a brand-new app from scratch",
+          "Built full-fledged app to act as an aggregate/hub for various smaller existing, outdated FAA SharePoint tools",
+          "Backend: .NET 6 API with Swagger Interface, Code-first approach, Database first approach, PostgreSQL, Oracle database, implemented RabbitMQ message-oriented middleware model",
+          "Front-End: Angular 15, template-driven forms, PrimeNg controls",
+          "Azure DevOps setup, CI/CD pipeline flow"
+        ],
+        "hybrid": [
+          "Gathered business requirements and architected new full-stack application from scratch for Federal Aviation Administration",
+          "Built comprehensive hub application integrating multiple legacy FAA SharePoint tools using Angular 15 and .NET 6",
+          "Implemented enterprise-grade backend with PostgreSQL, Oracle database, and RabbitMQ message-oriented middleware",
+          "Established Azure DevOps CI/CD pipeline flow ensuring compliance with federal standards",
+          "Collaborated with cross-functional teams to modernize outdated systems and improve operational efficiency"
+        ]
+      },
+      "technologies": [
+        ".NET 6",
+        "Angular 15",
+        "PostgreSQL",
+        "Oracle",
+        "RabbitMQ",
+        "Azure DevOps",
+        "PrimeNg",
+        "Swagger"
+      ],
+      "achievements": [
+        "Successfully architected and built brand-new FAA application from scratch",
+        "Modernized multiple legacy SharePoint tools into unified hub application",
+        "Established enterprise-grade CI/CD pipeline for federal compliance"
+      ]
+    },
+    {
+      "position": "SEO Architect/Angular 13/API",
+      "company": "SF Fire Credit Union",
+      "startDate": "Sep 2022",
+      "endDate": "Dec 2022",
+      "current": false,
+      "location": "Contract, Remote, Sacramento, CA",
+      "descriptions": {
+        "seo": [
+          "Managed SEO and content marketing efforts for multiple locations, increasing organic traffic by an average of 19% in 3 months",
+          "Converting the old interface into Angular 13, substantially improved UI/UX",
+          "Implemented Azure CodePipeline for new ServiceStack v5 code base, IIS10 Configuration",
+          "Migrated existing ServiceStack backend to v5 and implemented GraphQL APIs",
+          "Configured AWS CodePipeline for streamlined application deployment"
+        ],
+        "ai": [
+          "Implemented AI-driven content optimization strategies for improved SEO performance",
+          "Developed intelligent analytics systems for tracking and optimizing organic traffic growth",
+          "Created automated content analysis tools for SEO performance monitoring",
+          "Integrated machine learning algorithms for predictive SEO analytics",
+          "Implemented AI-powered user experience optimization resulting in 19% traffic increase"
+        ],
+        "fullstack": [
+          "Migrated existing ServiceStack backend to v5 and implemented GraphQL APIs",
+          "Rebuilt the UI with Angular 13, enhancing user experience and responsiveness",
+          "Configured AWS CodePipeline for streamlined application deployment",
+          "Converting the old interface into Angular 13, substantially improved UI/UX",
+          "Implemented Azure CodePipeline for new ServiceStack v5 code base"
+        ],
+        "hybrid": [
+          "Managed comprehensive SEO strategy while modernizing technical infrastructure with Angular 13",
+          "Increased organic traffic by 19% in 3 months through combined SEO optimization and UI/UX improvements",
+          "Migrated legacy ServiceStack backend to v5 and implemented modern GraphQL APIs",
+          "Configured advanced CI/CD pipelines using both AWS CodePipeline and Azure DevOps",
+          "Successfully balanced SEO performance goals with technical modernization objectives"
+        ]
+      },
+      "technologies": [
+        "Angular 13",
+        "ServiceStack v5",
+        "GraphQL",
+        "AWS CodePipeline",
+        "Azure DevOps",
+        "IIS10",
+        "SEO Tools"
+      ],
+      "achievements": [
+        "Increased organic traffic by 19% in 3 months across multiple locations",
+        "Successfully migrated legacy backend to modern ServiceStack v5 architecture",
+        "Substantially improved UI/UX through Angular 13 modernization"
+      ]
+    }
+  ],
+  "technicalSkills": {
+    "programmingLanguages": {
+      "JavaScript": 95,
+      "TypeScript": 90,
+      "C#": 95,
+      "Python": 85,
+      "Java": 70,
+      "PHP": 75
+    },
+    "frontendFrameworks": {
+      "Angular": 95,
+      "React": 85,
+      "Vue.js": 70,
+      "Next.js": 75,
+      "Nuxt.js": 65
+    },
+    "backendTechnologies": {
+      ".NET Core": 95,
+      ".NET 6": 95,
+      "Node.js": 85,
+      "Express.js": 80,
+      "Django": 75,
+      "ServiceStack": 90
+    },
+    "databases": {
+      "PostgreSQL": 90,
+      "SQL Server": 95,
+      "MongoDB": 80,
+      "Oracle": 85,
+      "Elasticsearch": 90,
+      "DynamoDB": 75
+    },
+    "cloudPlatforms": {
+      "AWS": 90,
+      "Azure": 85,
+      "Google Cloud": 70,
+      "Cloudfront": 85,
+      "Lambda": 85
+    },
+    "seoTools": {
+      "Google Analytics": 90,
+      "Google Search Console": 85,
+      "SEMrush": 80,
+      "Elasticsearch": 90,
+      "Apache Solr": 85,
+      "Technical SEO": 90
+    },
+    "devOpsTools": {
+      "Azure DevOps": 90,
+      "TeamCity": 85,
+      "Octopus": 80,
+      "AWS CodePipeline": 85,
+      "Terraform": 80,
+      "Docker": 75
+    },
+    "aiMlTechnologies": {
+      "TensorFlow": 75,
+      "scikit-learn": 70,
+      "Pandas": 75,
+      "NumPy": 70,
+      "NLP": 75,
+      "Google Cloud NLP API": 70
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "diversifiedSearchConfigurations": [
+    {
+      "id": "sf-software-engineer",
+      "name": "Software Engineer - San Francisco Bay Area",
+      "keywords": ["Software Engineer", "Software Developer"],
+      "location": "San Francisco Bay Area",
+      "remote": true,
+      "experienceLevel": "Mid-Senior level",
+      "jobType": "Full-time",
+      "salaryMin": 80000,
+      "datePosted": "Past 24 hours",
+      "industries": ["Technology", "Software Development"],
+      "companySize": ["Mid-size", "Enterprise"]
+    },
+    {
+      "id": "seattle-react-developer",
+      "name": "React Developer - Seattle",
+      "keywords": ["React Developer", "Frontend Developer", "JavaScript Developer"],
+      "location": "Seattle, WA",
+      "remote": true,
+      "experienceLevel": "Mid-Senior level",
+      "jobType": "Full-time",
+      "salaryMin": 75000,
+      "datePosted": "Past week",
+      "industries": ["Technology", "SaaS"],
+      "companySize": ["Startup", "Mid-size"]
+    },
+    {
+      "id": "austin-fullstack",
+      "name": "Full Stack - Austin",
+      "keywords": ["Full Stack Developer", "Full Stack Engineer"],
+      "location": "Austin, TX",
+      "remote": true,
+      "experienceLevel": "Senior",
+      "jobType": "Full-time",
+      "salaryMin": 70000,
+      "datePosted": "Past week",
+      "industries": ["Technology", "Fintech"],
+      "companySize": ["Mid-size", "Enterprise"]
+    },
+    {
+      "id": "nyc-web-developer",
+      "name": "Web Developer - New York",
+      "keywords": ["Web Developer", "Frontend Backend Developer"],
+      "location": "New York, NY",
+      "remote": true,
+      "experienceLevel": "Mid-Senior level",
+      "jobType": "Full-time",
+      "salaryMin": 85000,
+      "datePosted": "Past 2 weeks",
+      "industries": ["Technology", "Fintech", "E-commerce"],
+      "companySize": ["Mid-size", "Enterprise"]
+    },
+    {
+      "id": "remote-nodejs",
+      "name": "Node.js Developer - Remote",
+      "keywords": ["Node.js Developer", "Backend Developer", "JavaScript Developer"],
+      "location": "Remote",
+      "remote": true,
+      "experienceLevel": "Mid-Senior level",
+      "jobType": "Full-time",
+      "salaryMin": 70000,
+      "datePosted": "Past week",
+      "industries": ["Technology", "SaaS", "Healthcare"],
+      "companySize": ["Startup", "Mid-size"]
+    },
+    {
+      "id": "denver-software-engineer",
+      "name": "Software Engineer - Denver",
+      "keywords": ["Software Engineer", "Software Development Engineer"],
+      "location": "Denver, CO",
+      "remote": true,
+      "experienceLevel": "Mid-Senior level",
+      "jobType": "Full-time",
+      "salaryMin": 75000,
+      "datePosted": "Past month",
+      "industries": ["Technology", "Healthcare", "SaaS"],
+      "companySize": ["Mid-size", "Enterprise"]
+    },
+    {
+      "id": "boston-javascript",
+      "name": "JavaScript Developer - Boston",
+      "keywords": ["JavaScript Developer", "Frontend Developer"],
+      "location": "Boston, MA",
+      "remote": true,
+      "experienceLevel": "Mid-Senior level",
+      "jobType": "Full-time",
+      "salaryMin": 80000,
+      "datePosted": "Past 2 weeks",
+      "industries": ["Technology", "Healthcare", "Fintech"],
+      "companySize": ["Mid-size", "Enterprise"]
+    },
+    {
+      "id": "remote-python-fullstack",
+      "name": "Python Full Stack - Remote",
+      "keywords": ["Python Developer", "Full Stack Python", "Django Developer"],
+      "location": "Remote",
+      "remote": true,
+      "experienceLevel": "Mid-Senior level",
+      "jobType": "Full-time",
+      "salaryMin": 70000,
+      "datePosted": "Past week",
+      "industries": ["Technology", "SaaS", "E-commerce"],
+      "companySize": ["Startup", "Mid-size"]
+    },
+    {
+      "id": "la-react-fullstack",
+      "name": "React Full Stack - Los Angeles",
+      "keywords": ["React Developer", "Full Stack React", "MERN Stack"],
+      "location": "Los Angeles, CA",
+      "remote": true,
+      "experienceLevel": "Mid-Senior level",
+      "jobType": "Full-time",
+      "salaryMin": 75000,
+      "datePosted": "Past week",
+      "industries": ["Technology", "Entertainment", "E-commerce"],
+      "companySize": ["Mid-size", "Enterprise"]
+    },
+    {
+      "id": "chicago-software-dev",
+      "name": "Software Developer - Chicago",
+      "keywords": ["Software Developer", "Web Developer"],
+      "location": "Chicago, IL",
+      "remote": true,
+      "experienceLevel": "Mid-Senior level",
+      "jobType": "Full-time",
+      "salaryMin": 70000,
+      "datePosted": "Past month",
+      "industries": ["Technology", "Fintech", "Healthcare"],
+      "companySize": ["Mid-size", "Enterprise"]
+    }
+  ],
+  "duplicatePreventionDatabase": {
+    "excludedJobUrls": [
+      "https://www.linkedin.com/jobs/view/4242950328",
+      "https://www.linkedin.com/jobs/view/4280527652",
+      "https://www.linkedin.com/jobs/view/4267997867"
+    ],
+    "excludedCompanyPositions": [
+      "GoFormz|Senior Marketing Manager, SEO & Content",
+      "Breeze End Tech|Search Engine Optimization Specialist",
+      "Salt AI|Full Stack Engineer"
+    ]
+  },
+  "searchExecutionStrategy": {
+    "maxSearches": 10,
+    "targetUniquePositions": 10,
+    "delayBetweenSearches": 30000,
+    "clearCacheBetweenSearches": true,
+    "requireEasyApply": true,
+    "minimumMatchScore": 70
+  },
+  "qualityFilters": {
+    "fullStackKeywords": [
+      "full stack", "full-stack", "fullstack", 
+      "frontend", "backend", "front-end", "back-end",
+      "react", "node.js", "javascript", "typescript",
+      "database", "api", "web development"
+    ],
+    "excludeKeywords": [
+      "intern", "internship", "contract", "freelance",
+      "part-time", "temporary", "consultant"
+    ],
+    "requiredSkillsAny": [
+      "React", "Angular", "Vue.js", "Node.js", 
+      "JavaScript", "TypeScript", "Python", "Java",
+      "SQL", "MongoDB", "PostgreSQL", "REST API"
+    ]
+  }
+}

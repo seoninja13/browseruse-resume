@@ -143,7 +143,7 @@ async function main() {
     const profileConfig = config.get('profile');
     const searchFilters = config.get('searchFilters');
 
-    // Use SEO filter as default (based on our successful test)
+    // Use SEO filter to test the fixed search implementation
     const searchCriteria = searchFilters.seo;
 
     logger.info(`Searching for ${searchCriteria.name}...`);
@@ -156,8 +156,8 @@ async function main() {
     logger.info('🧠 Demonstrating intelligent resume generation...');
     await demonstrateResumeGeneration(analysis.topMatches.slice(0, 2));
 
-    // Phase 4: Application Submission (Top 3 matches)
-    const topMatches = analysis.topMatches.slice(0, 3);
+    // Phase 4: Application Submission (Top 5 matches for comprehensive SEO workflow)
+    const topMatches = analysis.topMatches.slice(0, 5);
     const applicationOptions = {
       includeCoverLetter: true,
       customMessage: true,

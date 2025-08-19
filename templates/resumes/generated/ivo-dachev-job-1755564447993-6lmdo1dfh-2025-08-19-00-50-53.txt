@@ -1,0 +1,40 @@
+Ivo Dachev
+Full-Stack Web/AI Developer
+dachevivo@gmail.com | (650) 222-7923
+Sacramento, California, United States
+
+PROFESSIONAL SUMMARY
+Proven experience in IT, with a strong background in developing, maintaining, and optimizing enterprise search solutions. Skilled in implementing and supporting a variety of search technologies, including Apache Solr Enterprise Search and Elasticsearch for internal search functionalities. Hands-on experience with search performance optimization, including indexing and query processing.
+
+WORK EXPERIENCE
+SEO/Product Owner/Developer - 1BuilderMedia Marketing LLC/EDD
+Jan 2024 - Present
+• Architected EDD's and implemented enterprise search solutions for internal clients, utilizing a search-as-a-service model for enhanced performance and user experience
+• Developed search functionalities using Elasticsearch to provide highly relevant search results for large datasets
+• Collaborated with IT security teams to develop and manage security controls for search platforms, ensuring compliance with relevant standards
+• Monitored and optimized search performance, including indexing and query processing, to improve the reliability and speed of internal search applications
+• Successfully implemented SEO, SEM strategies for small and big traffic websites, third parties API Integration
+
+Hands On SEO Architect, .Net 6 - Incedo Inc / LPL Financial
+Sep 2023 - Jan 2024
+• Provided hands-on support and implementation for enterprise search technologies, focusing on back-end integration and data indexing
+• Utilized Elasticsearch to build a robust search index for various data sources, improving data discoverability and access for internal users
+• Worked with a cross-functional team of developers and architects to integrate search functionalities into existing infrastructure
+• Participated in code reviews and design sessions to validate implementation choices for search and data retrieval systems
+• Designed and implemented AWS-based solutions including CI/CD using TeamCity and Octopus
+
+Software Engineer, Architect, Business Analyst, .Net 6, Angular 15 - CSSI Inc (Federal Aviation Administration)
+Feb 2023 - Jul 2023
+
+SEO Architect/Angular 13/API - SF Fire Credit Union
+Sep 2022 - Dec 2022
+
+TECHNICAL SKILLS
+programmingLanguages: JavaScript, TypeScript, C#, Python, Java, PHP
+frontendFrameworks: Angular, React, Vue.js, Next.js, Nuxt.js
+backendTechnologies: .NET Core, .NET 6, Node.js, Express.js, Django, ServiceStack
+databases: PostgreSQL, SQL Server, MongoDB, Oracle, Elasticsearch, DynamoDB
+cloudPlatforms: AWS, Azure, Google Cloud, Cloudfront, Lambda
+seoTools: Google Analytics, Google Search Console, SEMrush, Elasticsearch, Apache Solr, Technical SEO
+devOpsTools: Azure DevOps, TeamCity, Octopus, AWS CodePipeline, Terraform, Docker
+aiMlTechnologies: TensorFlow, scikit-learn, Pandas, NumPy, NLP, Google Cloud NLP API

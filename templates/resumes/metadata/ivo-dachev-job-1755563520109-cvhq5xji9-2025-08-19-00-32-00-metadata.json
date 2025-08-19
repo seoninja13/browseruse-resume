@@ -1,0 +1,34 @@
+{
+  "jobId": "job-1755563520109-cvhq5xji9",
+  "jobTitle": "1. SEO Specialist - TechCorp Inc.",
+  "company": "San Francisco, CA (Remote)",
+  "generatedAt": "2025-08-19T00:32:02.167Z",
+  "jobAnalysis": {
+    "jobType": "seo",
+    "requiredSkills": [],
+    "experienceRequirements": {
+      "yearsRequired": 0,
+      "seniorityLevel": "mid",
+      "specificExperience": []
+    },
+    "skillMatchScores": {},
+    "overallMatchScore": 30,
+    "primaryFocus": {
+      "jobType": "seo",
+      "primarySkills": [],
+      "focusAreas": []
+    },
+    "customizationLevel": "extensive"
+  },
+  "customizations": {
+    "level": "extensive",
+    "focusAreas": [],
+    "primarySkills": [],
+    "matchScore": 30,
+    "customizedAt": "2025-08-19T00:32:00.132Z"
+  },
+  "filePaths": {
+    "json": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-1755563520109-cvhq5xji9-2025-08-19-00-32-00.json",
+    "pdf": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-1755563520109-cvhq5xji9-2025-08-19-00-32-00.pdf"
+  }
+}

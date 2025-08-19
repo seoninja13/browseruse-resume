@@ -1,0 +1,37 @@
+Ivo Dachev
+Full-Stack Web/AI Developer
+dachevivo@gmail.com | (650) 222-7923
+Sacramento, California, United States
+
+PROFESSIONAL SUMMARY
+Seasoned Full-Stack Web Developer with 15+ years of experience building scalable web applications and leading technical teams. Expertise in modern JavaScript frameworks, cloud architecture, and agile development methodologies. Proven track record of delivering high-performance solutions that drive business growth and user engagement.
+
+WORK EXPERIENCE
+Senior Full-Stack Developer - Incedo Inc.
+2022-01 - Present
+• Lead development of enterprise-scale web applications using React, Node.js, and cloud technologies, serving 100K+ users
+• Architect and implement microservices-based solutions with 99.9% uptime and sub-200ms response times
+• Mentor junior developers and establish coding standards that improved team productivity by 40%
+• Collaborate with product managers and designers to deliver user-centric features that increased engagement by 35%
+• Implement CI/CD pipelines and automated testing frameworks, reducing deployment time by 60%
+
+Lead Software Engineer - TechVision Solutions
+2019-03 - 2021-12
+• Led a team of 8 developers in building scalable e-commerce platforms using React, Vue.js, and Node.js
+• Designed and implemented RESTful APIs and GraphQL services handling 1M+ requests per day
+• Established development best practices and code review processes that reduced bugs by 50%
+• Collaborated with DevOps teams to implement containerized deployment strategies using Docker and Kubernetes
+• Mentored junior developers and conducted technical interviews for team expansion
+
+Senior Web Developer - Digital Innovations Corp
+2016-06 - 2019-02
+
+TECHNICAL SKILLS
+programmingLanguages: JavaScript, Python, TypeScript, C#, Java, PHP
+frontendFrameworks: React, Vue.js, Angular, Next.js, Nuxt.js
+backendTechnologies: Node.js, Express.js, Django, Flask, ASP.NET
+databases: PostgreSQL, MongoDB, MySQL, Redis, Elasticsearch
+cloudPlatforms: AWS, Azure, Google Cloud, Heroku
+aiMlTechnologies: TensorFlow, PyTorch, scikit-learn, Pandas, NumPy
+seoTools: Google Analytics, Google Search Console, SEMrush, Ahrefs, Screaming Frog
+devOpsTools: Docker, Kubernetes, Jenkins, GitLab CI, GitHub Actions

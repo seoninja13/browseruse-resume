@@ -1,0 +1,478 @@
+{
+  "personalInfo": {
+    "name": "Ivo Dachev",
+    "title": "Full-Stack Web/AI Developer",
+    "email": "dachevivo@gmail.com",
+    "phone": "(650) 222-7923",
+    "location": "Sacramento, California, United States",
+    "linkedin": "https://www.linkedin.com/in/ivo-dachev",
+    "github": "https://github.com/IvoDachev",
+    "website": "https://ivodachev.dev",
+    "openToWork": true,
+    "experience": "15+ years"
+  },
+  "professionalSummaries": {
+    "fullstack": "Seasoned Full-Stack Web Developer with 15+ years of experience building scalable web applications and leading technical teams. Expertise in modern JavaScript frameworks, cloud architecture, and agile development methodologies. Proven track record of delivering high-performance solutions that drive business growth and user engagement.",
+    "ai": "Innovative AI/ML Engineer with 15+ years of software development experience and deep expertise in artificial intelligence, machine learning, and data-driven solutions. Skilled in Python, TensorFlow, and cloud-based AI services. Passionate about leveraging AI to solve complex business problems and create intelligent automation systems.",
+    "seo": "Technical SEO Specialist with unique full-stack development background, combining 15+ years of web development expertise with advanced SEO optimization skills. Proven ability to implement technical SEO improvements directly, bridge marketing and development teams, and drive measurable organic growth through data-driven strategies.",
+    "hybrid": "Versatile Senior Technology Professional with 15+ years of experience spanning full-stack development, AI/ML engineering, and technical SEO optimization. Unique combination of deep technical skills and business acumen, with proven ability to lead cross-functional teams and deliver innovative solutions that drive measurable results."
+  },
+  "workExperience": [
+    {
+      "position": "Senior Full-Stack Developer",
+      "company": "Incedo Inc.",
+      "location": "Sacramento, CA (Remote)",
+      "startDate": "2022-01",
+      "endDate": "Present",
+      "current": true,
+      "technologies": [
+        "React",
+        "Node.js",
+        "Python",
+        "TensorFlow",
+        "AWS",
+        "PostgreSQL",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "SEO Tools"
+      ],
+      "achievements": [
+        "Increased application performance by 60% through optimization and caching strategies",
+        "Led successful migration of legacy systems to modern cloud architecture",
+        "Implemented AI-powered features that improved user engagement by 35%",
+        "Achieved 200% increase in organic traffic through technical SEO improvements"
+      ],
+      "description": [
+        "Implement technical SEO improvements that increased organic traffic by 200% and improved Core Web Vitals scores",
+        "Develop SEO-optimized web applications with server-side rendering and advanced performance optimization",
+        "Create automated SEO auditing tools and dashboards for continuous monitoring and optimization",
+        "Collaborate with marketing teams to implement data-driven SEO strategies and content optimization",
+        "Lead technical SEO initiatives including site architecture optimization and structured data implementation"
+      ]
+    },
+    {
+      "position": "Lead Software Engineer",
+      "company": "TechVision Solutions",
+      "location": "San Francisco, CA (Hybrid)",
+      "startDate": "2019-03",
+      "endDate": "2021-12",
+      "current": false,
+      "technologies": [
+        "Vue.js",
+        "React",
+        "Node.js",
+        "Python",
+        "scikit-learn",
+        "PostgreSQL",
+        "MongoDB",
+        "Docker",
+        "Kubernetes",
+        "SEO Analytics"
+      ],
+      "achievements": [
+        "Successfully led team expansion from 4 to 8 developers",
+        "Reduced system downtime by 80% through improved architecture and monitoring",
+        "Implemented ML-powered features that increased conversion rates by 25%",
+        "Achieved 150% increase in organic search traffic through technical SEO optimization"
+      ],
+      "description": [
+        "Optimized e-commerce platforms for search engines, achieving 150% increase in organic traffic",
+        "Implemented advanced technical SEO features including dynamic sitemaps and structured data",
+        "Developed SEO monitoring and reporting tools for continuous performance tracking",
+        "Led website performance optimization initiatives that improved Core Web Vitals scores by 40%",
+        "Collaborated with content and marketing teams to implement SEO-driven development practices"
+      ]
+    },
+    {
+      "position": "Senior Web Developer",
+      "company": "Digital Innovations Corp",
+      "location": "Sacramento, CA",
+      "startDate": "2016-06",
+      "endDate": "2019-02",
+      "current": false,
+      "descriptions": {
+        "fullstack": [
+          "Developed responsive web applications using JavaScript, HTML5, CSS3, and modern frameworks",
+          "Built and maintained RESTful APIs using Node.js and Express.js with MySQL and MongoDB databases",
+          "Implemented automated testing suites and CI/CD pipelines that improved deployment reliability by 70%",
+          "Collaborated with UX/UI designers to create intuitive user interfaces and optimize user experience",
+          "Optimized application performance and implemented caching strategies that reduced load times by 45%"
+        ],
+        "ai": [
+          "Developed data-driven web applications with integrated analytics and machine learning capabilities",
+          "Implemented automated data processing pipelines for business intelligence and reporting",
+          "Created intelligent user interfaces with predictive features and personalized content delivery",
+          "Collaborated with business analysts to identify opportunities for AI-powered automation",
+          "Built prototype machine learning models for customer behavior analysis and prediction"
+        ],
+        "seo": [
+          "Implemented comprehensive SEO strategies that improved search rankings and organic traffic by 120%",
+          "Developed SEO-friendly web applications with optimized site structure and performance",
+          "Created automated SEO reporting tools and performance monitoring dashboards",
+          "Collaborated with content teams to implement technical SEO best practices and optimization",
+          "Led website migration projects while maintaining search engine rankings and traffic"
+        ],
+        "hybrid": [
+          "Developed intelligent web applications combining full-stack development with SEO optimization and data analytics",
+          "Implemented automated systems for content optimization and performance monitoring",
+          "Created data-driven solutions that improved both user experience and search engine visibility",
+          "Led technical initiatives spanning web development, SEO optimization, and business intelligence",
+          "Delivered integrated solutions that achieved 120% organic traffic growth and 45% performance improvement"
+        ]
+      },
+      "technologies": [
+        "JavaScript",
+        "Node.js",
+        "Express.js",
+        "MySQL",
+        "MongoDB",
+        "HTML5",
+        "CSS3",
+        "jQuery",
+        "SEO Tools",
+        "Analytics"
+      ],
+      "achievements": [
+        "Improved application performance by 45% through optimization techniques",
+        "Successfully migrated 5 legacy applications to modern architecture",
+        "Achieved 120% increase in organic search traffic through SEO optimization",
+        "Implemented automated testing that reduced production bugs by 60%"
+      ]
+    }
+  ],
+  "technicalSkills": {
+    "programmingLanguages": {
+      "JavaScript": {
+        "proficiency": 95,
+        "years": 15,
+        "primary": true
+      },
+      "Python": {
+        "proficiency": 90,
+        "years": 8,
+        "primary": true
+      },
+      "TypeScript": {
+        "proficiency": 85,
+        "years": 5,
+        "primary": false
+      },
+      "C#": {
+        "proficiency": 80,
+        "years": 6,
+        "primary": false
+      },
+      "Java": {
+        "proficiency": 75,
+        "years": 4,
+        "primary": false
+      },
+      "PHP": {
+        "proficiency": 70,
+        "years": 8,
+        "primary": false
+      }
+    },
+    "frontendFrameworks": {
+      "React": {
+        "proficiency": 95,
+        "years": 7,
+        "primary": true
+      },
+      "Vue.js": {
+        "proficiency": 90,
+        "years": 5,
+        "primary": true
+      },
+      "Angular": {
+        "proficiency": 80,
+        "years": 3,
+        "primary": false
+      },
+      "Next.js": {
+        "proficiency": 85,
+        "years": 3,
+        "primary": false
+      },
+      "Nuxt.js": {
+        "proficiency": 80,
+        "years": 2,
+        "primary": false
+      }
+    },
+    "backendTechnologies": {
+      "Django": {
+        "proficiency": 85,
+        "years": 4,
+        "primary": false,
+        "highlighted": true
+      },
+      "Node.js": {
+        "proficiency": 95,
+        "years": 8,
+        "primary": true
+      },
+      "Express.js": {
+        "proficiency": 90,
+        "years": 8,
+        "primary": true
+      },
+      "Flask": {
+        "proficiency": 80,
+        "years": 3,
+        "primary": false
+      },
+      "ASP.NET": {
+        "proficiency": 75,
+        "years": 4,
+        "primary": false
+      }
+    },
+    "databases": {
+      "PostgreSQL": {
+        "proficiency": 90,
+        "years": 10,
+        "primary": true
+      },
+      "MongoDB": {
+        "proficiency": 85,
+        "years": 8,
+        "primary": true
+      },
+      "MySQL": {
+        "proficiency": 85,
+        "years": 12,
+        "primary": false
+      },
+      "Redis": {
+        "proficiency": 80,
+        "years": 5,
+        "primary": false
+      },
+      "Elasticsearch": {
+        "proficiency": 75,
+        "years": 3,
+        "primary": false
+      }
+    },
+    "cloudPlatforms": {
+      "AWS": {
+        "proficiency": 90,
+        "years": 6,
+        "primary": true
+      },
+      "Azure": {
+        "proficiency": 80,
+        "years": 4,
+        "primary": false
+      },
+      "Google Cloud": {
+        "proficiency": 75,
+        "years": 3,
+        "primary": false
+      },
+      "Heroku": {
+        "proficiency": 85,
+        "years": 5,
+        "primary": false
+      }
+    },
+    "aiMlTechnologies": {
+      "TensorFlow": {
+        "proficiency": 85,
+        "years": 4,
+        "primary": true
+      },
+      "PyTorch": {
+        "proficiency": 80,
+        "years": 3,
+        "primary": false
+      },
+      "scikit-learn": {
+        "proficiency": 90,
+        "years": 5,
+        "primary": true
+      },
+      "Pandas": {
+        "proficiency": 85,
+        "years": 5,
+        "primary": false
+      },
+      "NumPy": {
+        "proficiency": 85,
+        "years": 5,
+        "primary": false
+      }
+    },
+    "seoTools": {
+      "Google Analytics": {
+        "proficiency": 95,
+        "years": 10,
+        "primary": true
+      },
+      "Google Search Console": {
+        "proficiency": 95,
+        "years": 10,
+        "primary": true
+      },
+      "SEMrush": {
+        "proficiency": 90,
+        "years": 6,
+        "primary": true
+      },
+      "Ahrefs": {
+        "proficiency": 85,
+        "years": 5,
+        "primary": false
+      },
+      "Screaming Frog": {
+        "proficiency": 80,
+        "years": 4,
+        "primary": false
+      }
+    },
+    "devOpsTools": {
+      "Docker": {
+        "proficiency": 85,
+        "years": 5,
+        "primary": true
+      },
+      "Kubernetes": {
+        "proficiency": 80,
+        "years": 3,
+        "primary": false
+      },
+      "Jenkins": {
+        "proficiency": 80,
+        "years": 4,
+        "primary": false
+      },
+      "GitLab CI": {
+        "proficiency": 85,
+        "years": 4,
+        "primary": false
+      },
+      "GitHub Actions": {
+        "proficiency": 90,
+        "years": 3,
+        "primary": true
+      }
+    }
+  },
+  "education": [
+    {
+      "degree": "Master of Science in Computer Science",
+      "institution": "University of California, Davis",
+      "location": "Davis, CA",
+      "graduationYear": "2008",
+      "gpa": "3.8/4.0",
+      "relevantCoursework": [
+        "Advanced Algorithms",
+        "Machine Learning",
+        "Database Systems",
+        "Software Engineering"
+      ]
+    },
+    {
+      "degree": "Bachelor of Science in Information Technology",
+      "institution": "California State University, Sacramento",
+      "location": "Sacramento, CA",
+      "graduationYear": "2006",
+      "gpa": "3.7/4.0",
+      "relevantCoursework": [
+        "Web Development",
+        "Database Design",
+        "Network Security",
+        "Systems Analysis"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "issueDate": "2023-03",
+      "expiryDate": "2026-03",
+      "credentialId": "AWS-SA-2023-001"
+    },
+    {
+      "name": "Google Analytics Certified",
+      "issuer": "Google",
+      "issueDate": "2023-01",
+      "expiryDate": "2024-01",
+      "credentialId": "GA-CERT-2023"
+    },
+    {
+      "name": "Certified Kubernetes Administrator",
+      "issuer": "Cloud Native Computing Foundation",
+      "issueDate": "2022-08",
+      "expiryDate": "2025-08",
+      "credentialId": "CKA-2022-001"
+    }
+  ],
+  "projects": [
+    {
+      "name": "AI-Powered E-commerce Platform",
+      "description": "Full-stack e-commerce solution with integrated machine learning for personalized recommendations",
+      "technologies": [
+        "React",
+        "Node.js",
+        "Python",
+        "TensorFlow",
+        "AWS",
+        "PostgreSQL"
+      ],
+      "achievements": [
+        "Increased conversion rates by 35%",
+        "Processed 1M+ transactions",
+        "Served 100K+ users"
+      ]
+    },
+    {
+      "name": "SEO Analytics Dashboard",
+      "description": "Comprehensive SEO monitoring and reporting platform with automated insights",
+      "technologies": [
+        "Vue.js",
+        "Node.js",
+        "MongoDB",
+        "Google APIs",
+        "Chart.js"
+      ],
+      "achievements": [
+        "Monitored 500+ websites",
+        "Generated automated reports",
+        "Improved SEO efficiency by 60%"
+      ]
+    },
+    {
+      "name": "Microservices Architecture Migration",
+      "description": "Led migration of monolithic application to microservices architecture",
+      "technologies": [
+        "Docker",
+        "Kubernetes",
+        "Node.js",
+        "PostgreSQL",
+        "Redis",
+        "AWS"
+      ],
+      "achievements": [
+        "Improved scalability by 300%",
+        "Reduced deployment time by 80%",
+        "Enhanced system reliability"
+      ]
+    }
+  ],
+  "professionalSummary": "Technical SEO Specialist with unique full-stack development background, combining 15+ years of web development expertise with advanced SEO optimization skills. Proven ability to implement technical SEO improvements directly, bridge marketing and development teams, and drive measurable organic growth through data-driven strategies.",
+  "customizations": {
+    "level": "moderate",
+    "focusAreas": [
+      "Backend Technologies"
+    ],
+    "primarySkills": [
+      "Django"
+    ],
+    "matchScore": 83,
+    "customizedAt": "2025-08-13T19:19:56.088Z"
+  }
+}

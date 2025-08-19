@@ -156,24 +156,33 @@ class BrowserAutomation {
   }
 
   /**
-   * Take a screenshot for debugging/logging
+   * Take a screenshot using browsermcp MCP server
    */
   async takeScreenshot(filename = null) {
     try {
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const screenshotName = filename || `screenshot-${timestamp}.png`;
-      
-      this.logger.info(`Taking screenshot: ${screenshotName}`);
-      
-      // Simulate screenshot capture
-      await this.wait(500);
-      
-      this.logger.info(`✅ Screenshot saved: ${screenshotName}`);
-      return { success: true, filename: screenshotName };
-      
+
+      this.logger.info(`Taking MCP screenshot: ${screenshotName}`);
+
+      // Direct MCP call for screenshot
+      const { use_tool_toolbox } = require('../../mcp-integration/toolbox-client');
+
+      const result = await use_tool_toolbox('browsermcp', {
+        name: 'browser_screenshot_browsermcp',
+        arguments: { filename: screenshotName }
+      });
+
+      this.logger.info(`✅ MCP Screenshot completed: ${screenshotName}`);
+      return {
+        success: true,
+        filename: screenshotName,
+        mcpResult: result
+      };
+
     } catch (error) {
-      this.logger.error('Screenshot failed:', error);
-      throw new Error(`Screenshot failed: ${error.message}`);
+      this.logger.error('MCP screenshot failed:', error);
+      throw error;
     }
   }
 
@@ -182,26 +191,34 @@ class BrowserAutomation {
    */
   async getPageSnapshot() {
     try {
-      this.logger.info('Capturing page snapshot...');
-      
-      // Simulate page snapshot capture
-      await this.wait(1000);
-      
+      this.logger.info('Capturing MCP page snapshot...');
+
+      // Direct MCP call for page snapshot
+      const { use_tool_toolbox } = require('../../mcp-integration/toolbox-client');
+
+      const result = await use_tool_toolbox('browsermcp', {
+        name: 'browser_snapshot_browsermcp',
+        arguments: {}
+      });
+
       const snapshot = {
         url: this.currentPage,
         timestamp: new Date().toISOString(),
-        title: 'LinkedIn Page',
-        elements: []
+        title: result.title || 'Page Title',
+        text: result.text || result,
+        mcpResult: result
       };
-      
-      this.logger.info('✅ Page snapshot captured');
+
+      this.logger.info('✅ MCP Page snapshot captured');
       return snapshot;
-      
+
     } catch (error) {
-      this.logger.error('Page snapshot failed:', error);
-      throw new Error(`Page snapshot failed: ${error.message}`);
+      this.logger.error('MCP page snapshot failed:', error);
+      throw error;
     }
   }
+
+
 
   /**
    * Check if LinkedIn session is active
@@ -237,27 +254,78 @@ class BrowserAutomation {
   }
 
   /**
-   * Simulate navigation (placeholder for actual browsermcp call)
+   * Direct navigation using browsermcp MCP server
    */
   async simulateNavigation(url) {
-    // This would be replaced with actual browsermcp MCP server call
-    await this.wait(1000);
+    try {
+      // Direct MCP call for navigation
+      const { use_tool_toolbox } = require('../../mcp-integration/toolbox-client');
+
+      const result = await use_tool_toolbox('browsermcp', {
+        name: 'browser_navigate_browsermcp',
+        arguments: { url: url }
+      });
+
+      this.logger.info(`✅ MCP Navigation successful: ${url}`);
+
+      // Wait for page load
+      await this.wait(2000);
+
+    } catch (error) {
+      this.logger.error('MCP navigation failed:', error);
+      throw error;
+    }
   }
 
   /**
-   * Simulate click (placeholder for actual browsermcp call)
+   * Direct click using browsermcp MCP server
    */
   async simulateClick(selector) {
-    // This would be replaced with actual browsermcp MCP server call
-    await this.wait(500);
+    try {
+      // Direct MCP call for clicking
+      const { use_tool_toolbox } = require('../../mcp-integration/toolbox-client');
+
+      const result = await use_tool_toolbox('browsermcp', {
+        name: 'browser_click_browsermcp',
+        arguments: {
+          element: `Element with selector: ${selector}`,
+          ref: selector
+        }
+      });
+
+      this.logger.info(`✅ MCP Click successful: ${selector}`);
+      await this.wait(1000);
+
+    } catch (error) {
+      this.logger.error('MCP click failed:', error);
+      throw error;
+    }
   }
 
   /**
-   * Simulate typing (placeholder for actual browsermcp call)
+   * Direct typing using browsermcp MCP server
    */
   async simulateType(selector, text) {
-    // This would be replaced with actual browsermcp MCP server call
-    await this.wait(text.length * 50);
+    try {
+      // Direct MCP call for typing
+      const { use_tool_toolbox } = require('../../mcp-integration/toolbox-client');
+
+      const result = await use_tool_toolbox('browsermcp', {
+        name: 'browser_type_browsermcp',
+        arguments: {
+          element: `Input field with selector: ${selector}`,
+          ref: selector,
+          text: text,
+          submit: false
+        }
+      });
+
+      this.logger.info(`✅ MCP Typing successful: ${selector}`);
+
+    } catch (error) {
+      this.logger.error('MCP typing failed:', error);
+      throw error;
+    }
   }
 
   /**

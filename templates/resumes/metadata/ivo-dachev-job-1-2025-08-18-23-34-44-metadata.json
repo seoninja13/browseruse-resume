@@ -1,0 +1,56 @@
+{
+  "jobId": "job-1",
+  "jobTitle": "Search Engine Optimization Specialist",
+  "company": "Breeze End Tech",
+  "generatedAt": "2025-08-18T23:34:46.111Z",
+  "jobAnalysis": {
+    "jobType": "seo",
+    "requiredSkills": [
+      {
+        "name": "Elasticsearch",
+        "category": "Databases & Data Storage",
+        "proficiency": 75,
+        "priority": "low"
+      }
+    ],
+    "experienceRequirements": {
+      "yearsRequired": 0,
+      "seniorityLevel": "mid",
+      "specificExperience": [
+        "optimization"
+      ]
+    },
+    "skillMatchScores": {
+      "Elasticsearch": {
+        "required": true,
+        "matchScore": null
+      }
+    },
+    "overallMatchScore": null,
+    "primaryFocus": {
+      "jobType": "seo",
+      "primarySkills": [
+        "Elasticsearch"
+      ],
+      "focusAreas": [
+        "Databases & Data Storage"
+      ]
+    },
+    "customizationLevel": "extensive"
+  },
+  "customizations": {
+    "level": "extensive",
+    "focusAreas": [
+      "Databases & Data Storage"
+    ],
+    "primarySkills": [
+      "Elasticsearch"
+    ],
+    "matchScore": null,
+    "customizedAt": "2025-08-18T23:34:44.079Z"
+  },
+  "filePaths": {
+    "json": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-1-2025-08-18-23-34-44.json",
+    "pdf": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-1-2025-08-18-23-34-44.pdf"
+  }
+}

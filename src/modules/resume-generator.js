@@ -10,6 +10,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const puppeteer = require('puppeteer');
 const { Logger, ErrorHandler } = require('./error-handling');
 
 class ResumeGenerator {
@@ -19,11 +20,11 @@ class ResumeGenerator {
     this.baseTemplatePath = path.join(__dirname, '..', '..', 'templates', 'resumes', 'base-template');
     this.generatedPath = path.join(__dirname, '..', '..', 'templates', 'resumes', 'generated');
     this.metadataPath = path.join(__dirname, '..', '..', 'templates', 'resumes', 'metadata');
-    
-    // Load base data
+
+    // Load base data from updated master file
     this.masterData = this.loadMasterData();
     this.skillsDatabase = this.loadSkillsDatabase();
-    
+
     // Ensure directories exist
     this.ensureDirectories();
   }
@@ -33,9 +34,21 @@ class ResumeGenerator {
    */
   loadMasterData() {
     try {
-      const masterPath = path.join(this.baseTemplatePath, 'ivo-dachev-master.json');
+      // Try to load the updated master data file first
+      const updatedMasterPath = path.join(this.baseTemplatePath, 'ivo-dachev-master-updated.json');
+      const originalMasterPath = path.join(this.baseTemplatePath, 'ivo-dachev-master.json');
+
+      let masterPath = updatedMasterPath;
+      if (!fs.existsSync(updatedMasterPath)) {
+        this.logger.warn('Updated master data file not found, falling back to original');
+        masterPath = originalMasterPath;
+      }
+
       const data = fs.readFileSync(masterPath, 'utf8');
-      return JSON.parse(data);
+      const masterData = JSON.parse(data);
+      this.logger.info(`✅ Master resume data loaded from: ${path.basename(masterPath)}`);
+
+      return masterData;
     } catch (error) {
       this.logger.error('Failed to load master resume data:', error);
       throw new Error('Master resume data not found');
@@ -512,22 +525,29 @@ class ResumeGenerator {
     Object.keys(skills).forEach(category => {
       const categorySkills = skills[category];
       const sortedSkills = {};
-      
+
       // First add required skills
       requiredSkills.forEach(skillName => {
-        if (categorySkills[skillName]) {
-          sortedSkills[skillName] = categorySkills[skillName];
-          sortedSkills[skillName].highlighted = true;
+        if (categorySkills[skillName] !== undefined) {
+          // Convert number to skill object if needed
+          const skillValue = typeof categorySkills[skillName] === 'number'
+            ? { score: categorySkills[skillName], highlighted: true }
+            : { ...categorySkills[skillName], highlighted: true };
+          sortedSkills[skillName] = skillValue;
         }
       });
-      
+
       // Then add remaining skills
       Object.keys(categorySkills).forEach(skillName => {
         if (!sortedSkills[skillName]) {
-          sortedSkills[skillName] = categorySkills[skillName];
+          // Convert number to skill object if needed
+          const skillValue = typeof categorySkills[skillName] === 'number'
+            ? { score: categorySkills[skillName], highlighted: false }
+            : { ...categorySkills[skillName], highlighted: false };
+          sortedSkills[skillName] = skillValue;
         }
       });
-      
+
       skills[category] = sortedSkills;
     });
     
@@ -535,34 +555,279 @@ class ResumeGenerator {
   }
 
   /**
-   * Generate PDF from resume data (placeholder implementation)
+   * Generate PDF from resume data using Puppeteer
    */
   async generatePDF(resumeData, baseFileName) {
     try {
       this.logger.info('Generating PDF resume...');
-      
-      // This would integrate with a PDF generation library like PDFKit or Puppeteer
-      // For now, we'll create a placeholder PDF path
-      
+
       const pdfPath = path.join(this.generatedPath, `${baseFileName}.pdf`);
-      
-      // Placeholder: Create a simple text file as PDF substitute
+
+      // Create HTML content for the resume
+      const htmlContent = this.convertToHTML(resumeData);
+
+      // Generate PDF using Puppeteer
+      const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+      });
+
+      const page = await browser.newPage();
+      await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+
+      // Generate PDF with professional formatting
+      await page.pdf({
+        path: pdfPath,
+        format: 'A4',
+        printBackground: true,
+        margin: {
+          top: '0.5in',
+          right: '0.5in',
+          bottom: '0.5in',
+          left: '0.5in'
+        }
+      });
+
+      await browser.close();
+
+      // Also create text version for fallback
       const resumeText = this.convertToText(resumeData);
       fs.writeFileSync(pdfPath.replace('.pdf', '.txt'), resumeText);
-      
-      // In real implementation, this would generate actual PDF
-      this.logger.info('✅ PDF generation completed (placeholder)');
-      
+
+      this.logger.info('✅ PDF generation completed successfully');
+
       return pdfPath;
-      
+
     } catch (error) {
       this.logger.error('PDF generation failed:', error);
-      throw error;
+
+      // Fallback to text file if PDF generation fails
+      const textPath = path.join(this.generatedPath, `${baseFileName}.txt`);
+      const resumeText = this.convertToText(resumeData);
+      fs.writeFileSync(textPath, resumeText);
+
+      this.logger.warn('PDF generation failed, created text file as fallback');
+      return textPath;
     }
   }
 
   /**
-   * Convert resume data to text format (placeholder for PDF generation)
+   * Convert resume data to professional HTML format for PDF generation
+   */
+  convertToHTML(resumeData) {
+    const html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${resumeData.personalInfo.name} - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            font-size: 11pt;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 15px;
+        }
+
+        .name {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 14pt;
+            color: #34495e;
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            font-size: 10pt;
+            color: #7f8c8d;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #2c3e50;
+            text-transform: uppercase;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .summary {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .job {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 11pt;
+        }
+
+        .job-company {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .job-dates {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 10pt;
+        }
+
+        .job-location {
+            color: #7f8c8d;
+            font-size: 10pt;
+            margin-bottom: 5px;
+        }
+
+        .job-description {
+            margin-left: 0;
+        }
+
+        .job-description li {
+            margin-bottom: 3px;
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .skill-category {
+            margin-bottom: 8px;
+        }
+
+        .skill-category-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 10pt;
+        }
+
+        .skill-list {
+            color: #34495e;
+            font-size: 10pt;
+        }
+
+        @media print {
+            body { print-color-adjust: exact; }
+            .container { padding: 0.3in; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">${resumeData.personalInfo.name}</div>
+            <div class="title">${resumeData.personalInfo.title}</div>
+            <div class="contact-info">
+                ${resumeData.personalInfo.email} | ${resumeData.personalInfo.phone}<br>
+                ${resumeData.personalInfo.location}
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary">${resumeData.professionalSummary}</div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="section">
+            <div class="section-title">Work Experience</div>
+            ${resumeData.workExperience.map(job => `
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <span class="job-title">${job.position}</span> -
+                            <span class="job-company">${job.company}</span>
+                        </div>
+                        <div class="job-dates">
+                            ${this.formatDateForDisplay(job.startDate)} - ${job.current ? 'Present' : this.formatDateForDisplay(job.endDate)}
+                        </div>
+                    </div>
+                    ${job.location ? `<div class="job-location">${job.location}</div>` : ''}
+                    <ul class="job-description">
+                        ${job.description ? job.description.map(desc => `<li>${desc}</li>`).join('') : ''}
+                    </ul>
+                </div>
+            `).join('')}
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                ${Object.entries(resumeData.technicalSkills).map(([category, skills]) => `
+                    <div class="skill-category">
+                        <div class="skill-category-title">${this.formatSkillCategoryName(category)}:</div>
+                        <div class="skill-list">${Object.keys(skills).slice(0, 8).join(', ')}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    </div>
+</body>
+</html>`;
+
+    return html;
+  }
+
+  /**
+   * Format skill category names for display
+   */
+  formatSkillCategoryName(category) {
+    return category
+      .replace(/([A-Z])/g, ' $1')
+      .replace(/^./, str => str.toUpperCase())
+      .trim();
+  }
+
+  /**
+   * Convert resume data to text format (fallback for PDF generation)
    */
   convertToText(resumeData) {
     let text = '';
@@ -581,7 +846,7 @@ class ResumeGenerator {
     text += 'WORK EXPERIENCE\n';
     resumeData.workExperience.forEach(job => {
       text += `${job.position} - ${job.company}\n`;
-      text += `${job.startDate} - ${job.current ? 'Present' : job.endDate}\n`;
+      text += `${this.formatDateForDisplay(job.startDate)} - ${job.current ? 'Present' : this.formatDateForDisplay(job.endDate)}\n`;
       if (job.description) {
         job.description.forEach(desc => {
           text += `• ${desc}\n`;
@@ -598,6 +863,34 @@ class ResumeGenerator {
     });
     
     return text;
+  }
+
+  /**
+   * Format date from "YYYY-MM" or "Month YYYY" to "Month YYYY" format
+   */
+  formatDateForDisplay(dateString) {
+    if (!dateString || dateString === 'Present') {
+      return dateString;
+    }
+
+    // If already in "Month YYYY" format, return as is
+    if (!/^\d{4}-\d{2}$/.test(dateString)) {
+      return dateString;
+    }
+
+    // Convert from "YYYY-MM" to "Month YYYY"
+    const [year, month] = dateString.split('-');
+    const monthNames = [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
+
+    const monthIndex = parseInt(month, 10) - 1;
+    if (monthIndex >= 0 && monthIndex < 12) {
+      return `${monthNames[monthIndex]} ${year}`;
+    }
+
+    return dateString; // Return original if parsing fails
   }
 
   /**

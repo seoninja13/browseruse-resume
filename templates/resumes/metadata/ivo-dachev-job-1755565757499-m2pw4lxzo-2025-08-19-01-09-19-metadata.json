@@ -1,0 +1,56 @@
+{
+  "jobId": "job-1755565757499-m2pw4lxzo",
+  "jobTitle": "2. Senior SEO Manager - Digital Marketing Solutions",
+  "company": "New York, NY (Remote)",
+  "generatedAt": "2025-08-19T01:09:21.222Z",
+  "jobAnalysis": {
+    "jobType": "seo",
+    "requiredSkills": [
+      {
+        "name": "GitLab CI",
+        "category": "DevOps & Deployment Tools",
+        "proficiency": 85,
+        "priority": "low"
+      }
+    ],
+    "experienceRequirements": {
+      "yearsRequired": 0,
+      "seniorityLevel": "senior",
+      "specificExperience": []
+    },
+    "skillMatchScores": {
+      "GitLab CI": {
+        "required": true,
+        "proficiency": 0,
+        "years": 0,
+        "matchScore": 0
+      }
+    },
+    "overallMatchScore": 30,
+    "primaryFocus": {
+      "jobType": "seo",
+      "primarySkills": [
+        "GitLab CI"
+      ],
+      "focusAreas": [
+        "DevOps & Deployment Tools"
+      ]
+    },
+    "customizationLevel": "extensive"
+  },
+  "customizations": {
+    "level": "extensive",
+    "focusAreas": [
+      "DevOps & Deployment Tools"
+    ],
+    "primarySkills": [
+      "GitLab CI"
+    ],
+    "matchScore": 30,
+    "customizedAt": "2025-08-19T01:09:19.442Z"
+  },
+  "filePaths": {
+    "json": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-1755565757499-m2pw4lxzo-2025-08-19-01-09-19.json",
+    "pdf": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-1755565757499-m2pw4lxzo-2025-08-19-01-09-19.pdf"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "jobId": "test-seo-updated",
+  "jobTitle": "Senior SEO Specialist",
+  "company": "Test Company Inc.",
+  "generatedAt": "2025-08-13T21:32:46.031Z",
+  "jobAnalysis": {
+    "jobType": "seo",
+    "requiredSkills": [
+      {
+        "name": "Elasticsearch",
+        "category": "Databases & Data Storage",
+        "proficiency": 75,
+        "priority": "high"
+      },
+      {
+        "name": "Google Analytics",
+        "category": "SEO & Analytics Tools",
+        "proficiency": 95,
+        "priority": "high"
+      },
+      {
+        "name": "Screaming Frog",
+        "category": "SEO & Analytics Tools",
+        "proficiency": 80,
+        "priority": "low"
+      }
+    ],
+    "experienceRequirements": {
+      "yearsRequired": 0,
+      "seniorityLevel": "senior",
+      "specificExperience": [
+        "optimization"
+      ]
+    },
+    "skillMatchScores": {
+      "Elasticsearch": {
+        "required": true,
+        "matchScore": null
+      },
+      "Google Analytics": {
+        "required": true,
+        "matchScore": null
+      },
+      "Screaming Frog": {
+        "required": true,
+        "proficiency": 0,
+        "years": 0,
+        "matchScore": 0
+      }
+    },
+    "overallMatchScore": null,
+    "primaryFocus": {
+      "jobType": "seo",
+      "primarySkills": [
+        "Elasticsearch",
+        "Google Analytics",
+        "Screaming Frog"
+      ],
+      "focusAreas": [
+        "SEO & Analytics Tools",
+        "Databases & Data Storage"
+      ]
+    },
+    "customizationLevel": "extensive"
+  },
+  "customizations": {
+    "level": "extensive",
+    "focusAreas": [
+      "SEO & Analytics Tools",
+      "Databases & Data Storage"
+    ],
+    "primarySkills": [
+      "Elasticsearch",
+      "Google Analytics",
+      "Screaming Frog"
+    ],
+    "matchScore": null,
+    "customizedAt": "2025-08-13T21:32:42.968Z"
+  },
+  "filePaths": {
+    "json": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-test-seo-updated-2025-08-13-21-32-42.json",
+    "pdf": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-test-seo-updated-2025-08-13-21-32-42.pdf"
+  }
+}

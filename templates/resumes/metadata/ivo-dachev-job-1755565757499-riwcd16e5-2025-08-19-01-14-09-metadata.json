@@ -1,0 +1,56 @@
+{
+  "jobId": "job-1755565757499-riwcd16e5",
+  "jobTitle": "4. Technical SEO Specialist - E-commerce Plus",
+  "company": "Seattle, WA (Remote)",
+  "generatedAt": "2025-08-19T01:14:11.348Z",
+  "jobAnalysis": {
+    "jobType": "seo",
+    "requiredSkills": [
+      {
+        "name": "Screaming Frog",
+        "category": "SEO & Analytics Tools",
+        "proficiency": 80,
+        "priority": "low"
+      }
+    ],
+    "experienceRequirements": {
+      "yearsRequired": 0,
+      "seniorityLevel": "mid",
+      "specificExperience": []
+    },
+    "skillMatchScores": {
+      "Screaming Frog": {
+        "required": true,
+        "proficiency": 0,
+        "years": 0,
+        "matchScore": 0
+      }
+    },
+    "overallMatchScore": 30,
+    "primaryFocus": {
+      "jobType": "seo",
+      "primarySkills": [
+        "Screaming Frog"
+      ],
+      "focusAreas": [
+        "SEO & Analytics Tools"
+      ]
+    },
+    "customizationLevel": "extensive"
+  },
+  "customizations": {
+    "level": "extensive",
+    "focusAreas": [
+      "SEO & Analytics Tools"
+    ],
+    "primarySkills": [
+      "Screaming Frog"
+    ],
+    "matchScore": 30,
+    "customizedAt": "2025-08-19T01:14:09.543Z"
+  },
+  "filePaths": {
+    "json": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-1755565757499-riwcd16e5-2025-08-19-01-14-09.json",
+    "pdf": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-1755565757499-riwcd16e5-2025-08-19-01-14-09.pdf"
+  }
+}

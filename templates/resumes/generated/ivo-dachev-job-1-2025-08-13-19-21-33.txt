@@ -1,0 +1,37 @@
+Ivo Dachev
+Full-Stack Web/AI Developer
+dachevivo@gmail.com | (650) 222-7923
+Sacramento, California, United States
+
+PROFESSIONAL SUMMARY
+Technical SEO Specialist with unique full-stack development background, combining 15+ years of web development expertise with advanced SEO optimization skills. Proven ability to implement technical SEO improvements directly, bridge marketing and development teams, and drive measurable organic growth through data-driven strategies.
+
+WORK EXPERIENCE
+Senior Full-Stack Developer - Incedo Inc.
+2022-01 - Present
+• Implement technical SEO improvements that increased organic traffic by 200% and improved Core Web Vitals scores
+• Develop SEO-optimized web applications with server-side rendering and advanced performance optimization
+• Create automated SEO auditing tools and dashboards for continuous monitoring and optimization
+• Collaborate with marketing teams to implement data-driven SEO strategies and content optimization
+• Lead technical SEO initiatives including site architecture optimization and structured data implementation
+
+Lead Software Engineer - TechVision Solutions
+2019-03 - 2021-12
+• Optimized e-commerce platforms for search engines, achieving 150% increase in organic traffic
+• Implemented advanced technical SEO features including dynamic sitemaps and structured data
+• Developed SEO monitoring and reporting tools for continuous performance tracking
+• Led website performance optimization initiatives that improved Core Web Vitals scores by 40%
+• Collaborated with content and marketing teams to implement SEO-driven development practices
+
+Senior Web Developer - Digital Innovations Corp
+2016-06 - 2019-02
+
+TECHNICAL SKILLS
+programmingLanguages: JavaScript, Python, TypeScript, C#, Java, PHP
+frontendFrameworks: React, Vue.js, Angular, Next.js, Nuxt.js
+backendTechnologies: Node.js, Express.js, Django, Flask, ASP.NET
+databases: Elasticsearch, PostgreSQL, MongoDB, MySQL, Redis
+cloudPlatforms: AWS, Azure, Google Cloud, Heroku
+aiMlTechnologies: TensorFlow, PyTorch, scikit-learn, Pandas, NumPy
+seoTools: Google Analytics, Google Search Console, SEMrush, Ahrefs, Screaming Frog
+devOpsTools: Docker, Kubernetes, Jenkins, GitLab CI, GitHub Actions

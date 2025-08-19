@@ -1,0 +1,68 @@
+{
+  "jobId": "job-1755565757499-4rqy9d64q",
+  "jobTitle": "5. SEO Content Manager - ContentFirst Media",
+  "company": "Los Angeles, CA (Remote)",
+  "generatedAt": "2025-08-19T01:15:37.530Z",
+  "jobAnalysis": {
+    "jobType": "seo",
+    "requiredSkills": [
+      {
+        "name": "Elasticsearch",
+        "category": "Databases & Data Storage",
+        "proficiency": 75,
+        "priority": "medium"
+      },
+      {
+        "name": "TensorFlow",
+        "category": "AI/ML Technologies",
+        "proficiency": 85,
+        "priority": "medium"
+      }
+    ],
+    "experienceRequirements": {
+      "yearsRequired": 0,
+      "seniorityLevel": "mid",
+      "specificExperience": []
+    },
+    "skillMatchScores": {
+      "Elasticsearch": {
+        "required": true,
+        "matchScore": null
+      },
+      "TensorFlow": {
+        "required": true,
+        "matchScore": null
+      }
+    },
+    "overallMatchScore": null,
+    "primaryFocus": {
+      "jobType": "seo",
+      "primarySkills": [
+        "Elasticsearch",
+        "TensorFlow"
+      ],
+      "focusAreas": [
+        "Databases & Data Storage",
+        "AI/ML Technologies"
+      ]
+    },
+    "customizationLevel": "extensive"
+  },
+  "customizations": {
+    "level": "extensive",
+    "focusAreas": [
+      "Databases & Data Storage",
+      "AI/ML Technologies"
+    ],
+    "primarySkills": [
+      "Elasticsearch",
+      "TensorFlow"
+    ],
+    "matchScore": null,
+    "customizedAt": "2025-08-19T01:15:35.792Z"
+  },
+  "filePaths": {
+    "json": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-1755565757499-4rqy9d64q-2025-08-19-01-15-35.json",
+    "pdf": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-1755565757499-4rqy9d64q-2025-08-19-01-15-35.pdf"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "jobId": "job-2",
+  "jobTitle": "Senior Marketing Manager, SEO & Content",
+  "company": "GoFormz",
+  "generatedAt": "2025-08-18T21:44:23.073Z",
+  "jobAnalysis": {
+    "jobType": "seo",
+    "requiredSkills": [
+      {
+        "name": "Django",
+        "category": "Backend Technologies",
+        "proficiency": 85,
+        "priority": "low"
+      }
+    ],
+    "experienceRequirements": {
+      "yearsRequired": 0,
+      "seniorityLevel": "senior",
+      "specificExperience": [
+        "optimization"
+      ]
+    },
+    "skillMatchScores": {
+      "Django": {
+        "required": true,
+        "matchScore": null
+      }
+    },
+    "overallMatchScore": null,
+    "primaryFocus": {
+      "jobType": "seo",
+      "primarySkills": [
+        "Django"
+      ],
+      "focusAreas": [
+        "Backend Technologies"
+      ]
+    },
+    "customizationLevel": "extensive"
+  },
+  "customizations": {
+    "level": "extensive",
+    "focusAreas": [
+      "Backend Technologies"
+    ],
+    "primarySkills": [
+      "Django"
+    ],
+    "matchScore": null,
+    "customizedAt": "2025-08-18T21:44:20.121Z"
+  },
+  "filePaths": {
+    "json": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-2-2025-08-18-21-44-20.json",
+    "pdf": "C:\\Users\\IvoD\\repos\\browseruse-resume\\templates\\resumes\\generated\\ivo-dachev-job-2-2025-08-18-21-44-20.pdf"
+  }
+}
