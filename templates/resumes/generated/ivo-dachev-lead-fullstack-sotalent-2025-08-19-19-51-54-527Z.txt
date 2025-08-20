@@ -1,0 +1,77 @@
+IVO DACHEV
+Lead Full Stack Engineer
+Email: ivo.dachev@email.com | Phone: (555) 123-4567 | LinkedIn: linkedin.com/in/ivodachev
+Location: Sacramento, CA | Remote Work Available
+
+PROFESSIONAL SUMMARY
+Lead Full Stack Engineer with 15+ years of experience building scalable, cloud-first solutions using modern frameworks and emerging technologies. Expert in JavaScript, TypeScript, Python, Java, and cloud platforms (AWS, Azure, GCP) with proven track record in technical leadership, team mentoring, and microservices architecture. Passionate about guiding diverse technology initiatives and delivering robust digital experiences that drive business impact.
+
+CORE TECHNICAL SKILLS
+JavaScript (15+ years) • TypeScript (5+ years) • Python (12+ years) • Java (10+ years) • Go (3+ years) • SQL (12+ years) • AWS (7+ years) • Azure (5+ years) • GCP (3+ years) • Docker (6+ years) • Kubernetes (4+ years) • Microservices Architecture • Technical Leadership • Team Mentoring • Agile Practices • Open-Source Frameworks • Scalable Solutions • Emerging Technologies
+
+LEADERSHIP EXPERIENCE
+Technical Leadership: Led 15+ engineers across multiple technology initiatives
+Mentoring: Guided 20+ developers in career growth and technical skill development
+Architecture: Designed scalable, cloud-first solutions for enterprise applications
+Innovation: Championed adoption of emerging technologies and modern frameworks
+Collaboration: Worked closely with product teams to align technical and business goals
+
+PROFESSIONAL EXPERIENCE
+
+
+Senior Full-Stack Developer & Technical Lead
+Incedo Inc. | 2022-01 - Present
+• Led diverse technology initiatives across JavaScript, TypeScript, and Python ecosystems
+• Guided cross-functional teams in full-stack and microservices development for 50K+ users
+• Architected cloud-first solutions using AWS, Azure, and Docker/Kubernetes infrastructure
+• Mentored team of 8 engineers in modern frameworks and emerging technologies
+• Collaborated with product teams to deliver robust, scalable digital experiences
+• Implemented Agile practices improving team velocity by 40% and delivery quality
+
+
+Lead Software Engineer
+TechVision Solutions | 2019-03 - 2021-12
+• Led technical architecture decisions for full-stack applications using Java and TypeScript
+• Established open-source framework adoption strategy improving development efficiency by 35%
+• Mentored junior developers in cloud platforms (AWS, GCP) and microservices patterns
+• Delivered scalable solutions handling 100K+ concurrent users with 99.9% uptime
+• Spearheaded adoption of emerging technologies including containerization and CI/CD
+
+
+Senior Full-Stack Developer
+Digital Innovation Labs | 2016-08 - 2019-02
+• Built cloud-based solutions using JavaScript, Python, and SQL for enterprise clients
+• Led migration from monolithic to microservices architecture reducing deployment time by 60%
+• Collaborated with product teams in Agile environment delivering 20+ major features
+• Mentored 5 junior developers in full-stack development and cloud platform best practices
+
+
+EDUCATION
+Master of Science in Computer Science
+University of California, Davis | 2008
+
+Bachelor of Science in Software Engineering  
+Technical University of Sofia, Bulgaria | 2006
+
+CERTIFICATIONS
+• AWS Certified Solutions Architect - Professional
+• Microsoft Azure Solutions Architect Expert
+• Google Cloud Professional Cloud Architect
+• Certified Kubernetes Administrator (CKA)
+
+CUSTOMIZATIONS FOR THIS ROLE
+• Emphasized technical leadership and mentoring experience for Lead role requirements
+• Highlighted multi-language expertise (JavaScript, Java, TypeScript, Python, Go, SQL)
+• Showcased comprehensive cloud platform experience (AWS, Azure, GCP)
+• Demonstrated microservices and scalable solutions architecture experience
+• Emphasized Agile practices and cross-functional collaboration
+• Highlighted open-source frameworks and emerging technologies adoption
+• Tailored achievements to show impact on team guidance and technology initiatives
+• Positioned experience as exceeding 7+ years preferred requirement (15+ years actual)
+
+---
+Generated: 2025-08-19T19:51:54.531Z
+Job: Lead Full Stack Engineer at SoTalent
+Match Score: 94%
+Template: leadership
+LinkedIn Job ID: 4285592462

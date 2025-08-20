@@ -3,7 +3,15 @@
 > **📍 For complete project documentation, see [README-index.md](../README-index.md) - the central documentation hub.**
 
 ## Overview
-This manual provides comprehensive guidance for day-to-day operations of the LinkedIn Browser Automation - Resume Submission System. It covers system startup, monitoring, troubleshooting, and maintenance procedures.
+This manual provides comprehensive guidance for day-to-day operations of the LinkedIn Browser Automation - Resume Submission System with Dynamic Resume Customization. It covers system startup, monitoring, troubleshooting, and maintenance procedures.
+
+**⚠️ CURRENT STATUS**: Work paused due to Augment Code performance issues. Core Dynamic Resume System validated but browser automation requires resolution.
+
+**📋 IMMEDIATE PRIORITIES WHEN RESUMING**:
+1. Complete Sequential Thinking failure analysis (mandatory MCP server)
+2. Create Linear issues for systematic browser automation issue tracking
+3. Resolve browsermcp session management problems
+4. Implement comprehensive end-to-end testing protocol
 
 ## Quick Start Guide
 
